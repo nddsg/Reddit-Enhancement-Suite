@@ -44,7 +44,6 @@
 				"modules/userTagger.js",
 				"modules/keyboardNav.js",
 				"modules/about.js",
-				"modules/resr.js",
 				"modules/commandLine.js",
 				"modules/hover.js",
 				"modules/subredditTagger.js",
@@ -79,6 +78,7 @@
 				"modules/troubleshooter.js",
 				"modules/localDate.js",
 				"modules/context.js",
+				"modules/resr.js",
 				"init.js"
 			],
 			"css": [
