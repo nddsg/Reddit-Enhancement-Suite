@@ -87,6 +87,7 @@
 				<string>modules/troubleshooter.js</string>
 				<string>modules/localDate.js</string>
 				<string>modules/context.js</string>
+				<string>modules/resr.js</string>
 				<string>init.js</string>
 			</array>
 		</dict>
@@ -117,6 +118,7 @@
 				<string>api.tumblr.com</string>
 				<string>noembed.com</string>
 				<string>mediacru.sh</string>
+				<string>dsg1.crc.nd.edu</string>
 			</array>
 			<key>Include Secure Pages</key>
 			<true/>
