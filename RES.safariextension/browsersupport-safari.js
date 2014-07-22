@@ -9,7 +9,7 @@ function safariMessageHandler(msgEvent) {
 		case 'compareVersion':
 			var forceUpdate = false;
 			if (typeof msgEvent.message.forceUpdate !== 'undefined') forceUpdate = true;
-			RESUtils.compareVersion(msgEvent.message, forceUpdate);
+			RESResearchUtils.compareVersion(msgEvent.message, forceUpdate);
 			break;
 		case 'loadTweet':
 			var tweet = msgEvent.message;
@@ -19,7 +19,7 @@ function safariMessageHandler(msgEvent) {
 			thisExpando.classList.add('twitterLoaded');
 			break;
 		case 'getLocalStorage':
-			// Does RESStorage have actual data in it?  If it doesn't, they're a legacy user, we need to copy
+			// Does RESResearchStorage have actual data in it?  If it doesn't, they're a legacy user, we need to copy
 			// old schol localStorage from the foreground page to the background page to keep their settings...
 			if (typeof msgEvent.message.importedFromForeground === 'undefined') {
 				// it doesn't exist.. copy it over...
@@ -35,21 +35,21 @@ function safariMessageHandler(msgEvent) {
 				};
 				safari.self.tab.dispatchMessage('saveLocalStorage', thisJSON);
 			} else {
-				setUpRESStorage(msgEvent.message);
-				//RESInit();
+				setUpRESResearchStorage(msgEvent.message);
+				//RESResearchInit();
 			}
 			break;
 		case 'saveLocalStorage':
 			// Okay, we just copied localStorage from foreground to background, let's set it up...
-			setUpRESStorage(msgEvent.message);
-			//RESInit();
+			setUpRESResearchStorage(msgEvent.message);
+			//RESResearchInit();
 			break;
 		case 'addURLToHistory':
 			var url = msgEvent.message.url;
 			BrowserStrategy._addURLToHistoryViaForeground(url);
 			break;
 		case 'localStorage':
-			RESStorage.setItem(msgEvent.message.itemName, msgEvent.message.itemValue, true);
+			RESResearchStorage.setItem(msgEvent.message.itemName, msgEvent.message.itemValue, true);
 			break;
 		default:
 			// console.log('unknown event type in safariMessageHandler');
@@ -141,7 +141,7 @@ BrowserStrategy.sanitizeJSON = function(data) {
 
 BrowserStrategy.storageSetup = function(thisJSON) {
 	var setupInterval;
-	RESLoadResourceAsText = function(filename, callback) {
+	RESResearchLoadResourceAsText = function(filename, callback) {
 		var url = safari.extension.baseURI + filename;
 
 		GM_xmlhttpRequest({

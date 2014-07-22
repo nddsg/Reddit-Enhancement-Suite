@@ -1,4 +1,4 @@
-#RESConsoleContainer {
+#RESResearchConsoleContainer {
 	visibility: hidden;
 	color: #000;
 	font-size: 12px;
@@ -22,13 +22,13 @@
 	-ms-transition:top 0.5s ease-in-out;
 	-transition:top 0.5s ease-in-out;
 }
-#RESConsoleContainer em { font-style: italic; }
-#RESConsoleContainer .handle { cursor: move; }
-#RESConsoleContainer.slideIn {
+#RESResearchConsoleContainer em { font-style: italic; }
+#RESResearchConsoleContainer .handle { cursor: move; }
+#RESResearchConsoleContainer.slideIn {
 	visibility: visible;
 	top: 30px;
 }
-#RESConsoleContainer.slideOut {
+#RESResearchConsoleContainer.slideOut {
 	visibility: visible;
 	top: -100%;
 }
@@ -62,7 +62,7 @@
 	width: auto;
 	height: auto;
 }
-#RESMainGearOverlay {
+#RESResearchMainGearOverlay {
 	position: absolute;
 	display: none;
 	width: 27px;
@@ -85,12 +85,12 @@
 	cursor: pointer;
 	background-position: 0px -134px;
 }
-#RESMainGearOverlay .gearIcon {
+#RESResearchMainGearOverlay .gearIcon {
 	position: absolute;
 	top: 3px;
 	left: 6px;
 }
-#RESSettingsButton {
+#RESResearchSettingsButton {
 	margin: auto;
 	margin-bottom: -2px;
 }
@@ -98,21 +98,21 @@
 	cursor: pointer;
 	background-position: 0px -134px;
 }
-#RESMainGearOverlay .gearIcon {
+#RESResearchMainGearOverlay .gearIcon {
 	position: absolute;
 	top: 3px;
 	left: 6px;
 }
-#RESSettingsButton {
+#RESResearchSettingsButton {
 	margin: auto;
 	margin-bottom: -2px;
 }
-#RESPrefsDropdown {
+#RESResearchPrefsDropdown {
 	display: none;
 	position: absolute;
 	z-index: 100000006;
 }
-.RESDropdownList {
+.RESResearchDropdownList {
 	list-style-type: none;
 	background-color: #5f99cf;
 	width: 180px;
@@ -121,7 +121,7 @@
 	border-bottom: none;
 	margin-top: -1px;
 }
-.RESDropdownList li {
+.RESResearchDropdownList li {
 	cursor: pointer;
 	border-bottom: 1px solid #369;
 	height: 35px;
@@ -130,19 +130,19 @@
 	color: #c9def2;
 	padding-left: 10px;
 }
-.RESDropdownList .toggleButton {
+.RESResearchDropdownList .toggleButton {
 	float: right;
 	margin-right: 10px;
 	margin-top: 10px;
 	line-height: 10px;
 }
-.RESDropdownList a, .RESDropdownList a:visited {
+.RESResearchDropdownList a, .RESResearchDropdownList a:visited {
 	display: inline-block;
 	width: 100%;
 	height: 100%;
 	color: #c9def2;
 }
-.RESDropdownList li:hover, .RESDropdownList li a:hover {
+.RESResearchDropdownList li:hover, .RESResearchDropdownList li a:hover {
 	background-color: #9cc6ec;
 	color: #369;
 }
@@ -160,18 +160,18 @@
 	height: 16px;
 	background-image: url(data:image/gif;base64,R0lGODlhEAAQAOZOAP///3F6hcopAJMAAP/M//Hz9OTr8ZqksMTL1P8pAP9MDP9sFP+DIP8zAO7x8/D1/LnEz+vx+Flha+Ln7OLm61hhayk0QCo1QMfR2eDo8b/K1M/U2pqiqcfP15WcpcLK05ymsig0P2lyftnf5naBi8XJzZ6lrJGdqmBqdKissYyZpf/+/puotNzk66ayvtbc4rC7x9Xd5n+KlbG7xpiirnJ+ivDz9KKrtrvH1Ojv9ePq8HF8h2x2gvj9/yYyPmRueFxlb4eRm+71+kFLVdrb3c/X4KOnrYGMl3uGke/0+5Sgq1ZfaY6Xn/X4+f///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAE4ALAAAAAAQABAAAAexgE6CggGFAYOIiAEPEREPh4lOhpOUgwEAmJmaABuQAUktMUUYGhAwLiwnKp41REYmHB5MQUcyN0iQTjsAHU05ICM4SjMQJIg8AAgFBgcvE5gUJYgiycsHDisCApjagj/VzAACBATa5AJOKOAHAAMMDOTvA05A6w7tC/kL804V9uIKAipA52QJgA82dNAQRyBBgwYJyjmRgKmHkAztHA4YAJHfEB8hLFxI0W4AACcbnQQCADs=)
 }
-#openRESPrefs {
+#openRESResearchPrefs {
 	display: inline-block;
 	height: 100%;
 }
-#RESConsoleHeader {
+#RESResearchConsoleHeader {
 	width: 100%;
 }
-#RESLogo {
+#RESResearchLogo {
 	margin-right: 5px;
 	float: left;
 }
-.RESDialogTopBar {
+.RESResearchDialogTopBar {
 	border-radius: 3px 3px 0 0;
 	position: absolute;
 	top: 0;
@@ -186,22 +186,22 @@
 	background-color: #F0F3FC;
 	float: left;
 }
-#RESConsoleTopBar h1 {
+#RESResearchConsoleTopBar h1 {
 	float: left;
 	margin-top: 6px;
 	padding: 0;
 	font-size: 14px;
 }
-#RESConsoleSubredditLink {
+#RESResearchConsoleSubredditLink {
 	float: right;
 	margin-right: 34px;
 	margin-top: 7px;
 	font-size: 11px;
 }
-#RESKnownBugs, #RESKnownFeatureRequests {
+#RESResearchKnownBugs, #RESResearchKnownFeatureRequests {
 	list-style-type: disc;
 }
-.RESCloseButton {
+.RESResearchCloseButton {
 	position: absolute;
 	top: 7px;
 	right: 7px;
@@ -217,20 +217,20 @@
 	z-index: 1000;
 	cursor: pointer;
 }
-#RESConsoleTopBar .RESCloseButton {
+#RESResearchConsoleTopBar .RESResearchCloseButton {
 	top: 9px;
 	right: 9px;
 }
-.RESCloseButton:hover {
+.RESResearchCloseButton:hover {
 	border: 1px solid #999;
 	background-color: #ddd;
 }
-#RESClose {
+#RESResearchClose {
 	float: right;
 	margin-top: 2px;
 	margin-right: 0;
 }
-.RESDialogSmall {
+.RESResearchDialogSmall {
 	background-color: #fff;
 	border: 1px solid #c7c7c7;
 	border-radius: 3px;
@@ -238,7 +238,7 @@
 	color: #666;
 	position: relative;
 }
-.RESDialogSmall > h3 {
+.RESResearchDialogSmall > h3 {
 	color: #000;
 	font-size: 14px;
 	margin-top: 6px;
@@ -256,14 +256,14 @@
 	padding-left: 10px;
 	padding-top: 12px;
 }
-.RESDialogSmall .RESDialogContents, .usertext-edit .RESDialogSmall .md.RESDialogContents {
+.RESResearchDialogSmall .RESResearchDialogContents, .usertext-edit .RESResearchDialogSmall .md.RESResearchDialogContents {
 	padding: 56px 12px 12px 12px; 
 }
-.usertext-edit .RESDialogSmall .md.RESDialogContents {
+.usertext-edit .RESResearchDialogSmall .md.RESResearchDialogContents {
 	border: none;
 	background-color: white !important;
 }
-#RESHelp {
+#RESResearchHelp {
 	background-image: url("https://s3.amazonaws.com/e.thumbs.redditmedia.com/r22WT2K4sio9Bvev.png");
 	background-position: -16px -120px;
 	margin-right: 8px;
@@ -272,14 +272,14 @@
 	float: right;
 	cursor: pointer;
 }
-#RESMenu {
+#RESResearchMenu {
 	position: absolute;
 	top: 60px;
 	left: 15px;
 	right: 0;
 	height: 30px;
 }
-#RESMenu li {
+#RESResearchMenu li {
 	float: left;
 	text-align: center;
 	/* min-width: 80px; */
@@ -292,15 +292,15 @@
 	background-color: #ddd;
 	color: #6c6c6c;
 }
-#RESMenu li.active {
+#RESResearchMenu li.active {
 	border-color: #000;
 	background-color: #7f7f7f;
 	color: #fff;
 }
-#RESMenu li:hover {
+#RESResearchMenu li:hover {
 	border-color: #000;
 }
-#RESConsoleContent {
+#RESResearchConsoleContent {
 	clear: both;
 	padding: 6px;
 	position: absolute;
@@ -311,7 +311,7 @@
 	border-top: 1px solid #DDD;
 	overflow: auto;
 }
-#RESConfigPanelOptions, #RESAboutDetails {
+#RESResearchConfigPanelOptions, #RESResearchAboutDetails {
 	margin-top: 15px;
 	display: block;
 	margin-left: 220px;
@@ -334,7 +334,7 @@
 #moduleOptionsScrim.visible {
 	display: block;
 }
-#RESConfigPanelModulesPane, #RESAboutPane {
+#RESResearchConfigPanelModulesPane, #RESResearchAboutPane {
 	float: left;
 	width: 195px;
 	padding-right: 15px;
@@ -362,7 +362,7 @@
 	opacity: 1;
 	font-weight: bold;
 }
-.RESPanel {
+.RESResearchPanel {
 	display: none;
 }
 .clear {
@@ -405,16 +405,16 @@ p.moduleListing {
 	-moz-box-shadow: 3px 3px 3px #BBB;
 	-webkit-box-shadow: 3px 3px 3px #BBB;
 }
-#RESConsoleModulesPanel label {
+#RESResearchConsoleModulesPanel label {
 	float: left;
 	width: 15%;
 	padding-top: 6px;
 }
-#RESConsoleModulesPanel input[type=checkbox] {
+#RESResearchConsoleModulesPanel input[type=checkbox] {
 	float: left;
 	margin-left: 10px;
 }
-#RESConsoleModulesPanel input[type=button] {
+#RESResearchConsoleModulesPanel input[type=button] {
 	float: right;
 	padding: 3px;
 	margin-left: 20px;
@@ -425,7 +425,7 @@ p.moduleListing {
 	background-color: #F0F3FC;
 	margin-bottom: 10px;
 }
-#RESConsoleModulesPanel p {
+#RESResearchConsoleModulesPanel p {
 	overflow: auto;
 	clear: both;
 	margin-bottom: 10px;
@@ -436,7 +436,7 @@ p.moduleListing {
 	margin-left: 10px;
 	padding-top: 6px;
 }
-#RESConfigPanelOptions .moduleDescription {
+#RESResearchConfigPanelOptions .moduleDescription {
 	margin-left: 0;
 	margin-top: 10px;
 	padding-top: 0;
@@ -468,7 +468,7 @@ p.moduleListing {
 	float: left;
 	margin-right: 15px;
 }
-#RESConsoleContainer .toggleButton {
+#RESResearchConsoleContainer .toggleButton {
 	margin-left: 10px;
 }
 .toggleButton input[type=checkbox] {
@@ -546,7 +546,7 @@ p.moduleListing {
 .optionContainer .optionsTable input[type=text], .optionContainer .optionsTable input[type=password] {
 	margin-left: 0;
 }
-.optionContainer .RESConsoleButton {
+.optionContainer .RESResearchConsoleButton {
 	float: left;
 	position: relative;
 	top: -6px;
@@ -577,7 +577,7 @@ p.moduleListing {
 	margin-top: 12px;
 	margin-bottom: 12px;
 }
-#RESConsoleVersionDisplay {
+#RESResearchConsoleVersionDisplay {
 	float: left;
 	font-size: 10px;
 	margin-left: 6px;
@@ -598,7 +598,7 @@ p.moduleListing {
 	background-color: #5cc410;
 	margin-bottom: 10px;
 }
-.RESConsoleButton {
+.RESResearchConsoleButton {
 	cursor: pointer;
 	padding: 3px 5px;
 	font-size: 12px;
@@ -653,34 +653,34 @@ p.moduleListing {
 	text-align: center;
 	background-color: #FFFACD;
 }
-#RESConsoleContent p {
+#RESResearchConsoleContent p {
 	margin-bottom: 10px;
 }
-#RESConsoleContent ul {
+#RESResearchConsoleContent ul {
 	margin-bottom: 10px;
 	margin-top: 10px;
 }
-#RESConsoleContent li {
+#RESResearchConsoleContent li {
 	list-style-type: disc;
 	margin-left: 15px;
 }
-#AboutRESTeamImage {
+#AboutRESResearchTeamImage {
 	width: 100%;
 	background-color: #000;
 	margin-bottom: 12px;
 }
-#AboutRESTeamImage img {
+#AboutRESResearchTeamImage img {
 	display: block;
 	margin: auto;
 }
-#SearchRES-results-container {
+#SearchRESResearch-results-container {
 	display: none;
 }
-#SearchRES-results-container + #SearchRES-boilerplate { margin-top: 1em; border-top: 1px black solid; padding-top: 1em; }
-#SearchRES-results-container h4 {
+#SearchRESResearch-results-container + #SearchRESResearch-boilerplate { margin-top: 1em; border-top: 1px black solid; padding-top: 1em; }
+#SearchRESResearch-results-container h4 {
 	margin-top: 1.5em;
 }
-#SearchRES-results-container li {
+#SearchRESResearch-results-container li {
 	list-style-type: none;
 	border-bottom: 1px dashed #ccc;
 	cursor: pointer;
@@ -689,19 +689,19 @@ p.moduleListing {
 	padding-top: 24px;
 	padding-bottom: 24px;
 }
-#SearchRES-results-container li:hover {
+#SearchRESResearch-results-container li:hover {
 	background-color: #FAFAFF;
 }
-.SearchRES-result-title {
+.SearchRESResearch-result-title {
 	margin-bottom: 12px;
 	font-weight: bold;
 	color: #666;
 }
-.SearchRES-breadcrumb {
+.SearchRESResearch-breadcrumb {
 	font-weight: normal;
 	color: #888;
 }
-.SearchRES-result-copybutton {
+.SearchRESResearch-result-copybutton {
 	float: right;
 	opacity: 0.4;
 	padding: 10px;
@@ -711,21 +711,21 @@ p.moduleListing {
 	background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAWCAYAAADeiIy1AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA+5pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ1dWlkOjY1RTYzOTA2ODZDRjExREJBNkUyRDg4N0NFQUNCNDA3IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkUwRjM3M0QxMDY5NTExRTI5OUZEQTZGODg4RDc1ODdCIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkUwRjM3M0QwMDY5NTExRTI5OUZEQTZGODg4RDc1ODdCIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDUzYgKE1hY2ludG9zaCkiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDowMTgwMTE3NDA3MjA2ODExODA4M0ZFMkJBM0M1RUU2NSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDowNjgwMTE3NDA3MjA2ODExODA4M0U3NkRBMDNEMDVDMSIvPiA8ZGM6dGl0bGU+IDxyZGY6QWx0PiA8cmRmOmxpIHhtbDpsYW5nPSJ4LWRlZmF1bHQiPmdseXBoaWNvbnM8L3JkZjpsaT4gPC9yZGY6QWx0PiA8L2RjOnRpdGxlPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pn00ay4AAAEISURBVHjavJWBDYQgDEXhcgMwwm2gIzgCIzjCjeAIjsAIN8KN4Ai6wW3AtTm4EChYkdjkm2javLa2IKy1olZgL9CD5XsShI8PSF8B8pqvAqEWUJ8FYemglQhEmfg/gA0uhvLHVo5EUtmAf3ZgCoNB74xvLkEVgnwlJtOep8vSVihM9veRAKiDFdhCK/VdECal9JBONLSkIhzVBpWUW4cT1giSDEMMmqP+GjdxA2OPiuMdgxb3bQozOr2wBMhSGTFAppQYBZoqDtWR4ZuA1MFromf60gt7AKZyp0oo6UD4ImuWEJYbB6Dbi28BYsXfQJsLMBUQH7Nx/HWDU4B3le9cfCWtHAjqK8AAypyhqqqagq4AAAAASUVORK5CYII=");
 	display: none;
 }
-#SearchRES-results li:hover .SearchRES-result-copybutton { display: block; }
-#SearchRES-input-submit {
+#SearchRESResearch-results li:hover .SearchRESResearch-result-copybutton { display: block; }
+#SearchRESResearch-input-submit {
 	margin-left: 8px;
 }
-#SearchRES-input {
+#SearchRESResearch-input {
 	width: 200px;
 	height: 22px;
 	font-size: 14px;
 }
-#SearchRES-input-container {
+#SearchRESResearch-input-container {
 	float: left;
 	margin-left: 3em;
 	margin-top: 7px;
 }
-#RESSearchMenuItem {
+#RESResearchSearchMenuItem {
 	display: block;
 	float: right;
 	margin: 7px;
@@ -735,11 +735,11 @@ p.moduleListing {
 	background: transparent center center no-repeat;
 	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAEJGlDQ1BJQ0MgUHJvZmlsZQAAOBGFVd9v21QUPolvUqQWPyBYR4eKxa9VU1u5GxqtxgZJk6XtShal6dgqJOQ6N4mpGwfb6baqT3uBNwb8AUDZAw9IPCENBmJ72fbAtElThyqqSUh76MQPISbtBVXhu3ZiJ1PEXPX6yznfOec7517bRD1fabWaGVWIlquunc8klZOnFpSeTYrSs9RLA9Sr6U4tkcvNEi7BFffO6+EdigjL7ZHu/k72I796i9zRiSJPwG4VHX0Z+AxRzNRrtksUvwf7+Gm3BtzzHPDTNgQCqwKXfZwSeNHHJz1OIT8JjtAq6xWtCLwGPLzYZi+3YV8DGMiT4VVuG7oiZpGzrZJhcs/hL49xtzH/Dy6bdfTsXYNY+5yluWO4D4neK/ZUvok/17X0HPBLsF+vuUlhfwX4j/rSfAJ4H1H0qZJ9dN7nR19frRTeBt4Fe9FwpwtN+2p1MXscGLHR9SXrmMgjONd1ZxKzpBeA71b4tNhj6JGoyFNp4GHgwUp9qplfmnFW5oTdy7NamcwCI49kv6fN5IAHgD+0rbyoBc3SOjczohbyS1drbq6pQdqumllRC/0ymTtej8gpbbuVwpQfyw66dqEZyxZKxtHpJn+tZnpnEdrYBbueF9qQn93S7HQGGHnYP7w6L+YGHNtd1FJitqPAR+hERCNOFi1i1alKO6RQnjKUxL1GNjwlMsiEhcPLYTEiT9ISbN15OY/jx4SMshe9LaJRpTvHr3C/ybFYP1PZAfwfYrPsMBtnE6SwN9ib7AhLwTrBDgUKcm06FSrTfSj187xPdVQWOk5Q8vxAfSiIUc7Z7xr6zY/+hpqwSyv0I0/QMTRb7RMgBxNodTfSPqdraz/sDjzKBrv4zu2+a2t0/HHzjd2Lbcc2sG7GtsL42K+xLfxtUgI7YHqKlqHK8HbCCXgjHT1cAdMlDetv4FnQ2lLasaOl6vmB0CMmwT/IPszSueHQqv6i/qluqF+oF9TfO2qEGTumJH0qfSv9KH0nfS/9TIp0Wboi/SRdlb6RLgU5u++9nyXYe69fYRPdil1o1WufNSdTTsp75BfllPy8/LI8G7AUuV8ek6fkvfDsCfbNDP0dvRh0CrNqTbV7LfEEGDQPJQadBtfGVMWEq3QWWdufk6ZSNsjG2PQjp3ZcnOWWing6noonSInvi0/Ex+IzAreevPhe+CawpgP1/pMTMDo64G0sTCXIM+KdOnFWRfQKdJvQzV1+Bt8OokmrdtY2yhVX2a+qrykJfMq4Ml3VR4cVzTQVz+UoNne4vcKLoyS+gyKO6EHe+75Fdt0Mbe5bRIf/wjvrVmhbqBN97RD1vxrahvBOfOYzoosH9bq94uejSOQGkVM6sN/7HelL4t10t9F4gPdVzydEOx83Gv+uNxo7XyL/FtFl8z9ZAHF4bBsrEwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAONJREFUOBGlkz0KwkAQRo2ICt5IsBE9gI1dwAOk8AqCgufQPo2CYGlhIVh4Aj2ClYVg4hvdCclmI8gOPHbn78vsLgnSNK35WN2nWXq9BRoVEwyIj6ANO4ghgbLJHVjM8BM4wwGesIYm2LU1O9ClSCwCzfXZi8gkF9NcSWBB0dVRGBPbOOLOSww4qJA38d3vbanqEabEA5Mbsj4gNH42vvgFxxTIJYpd4AgvcbAVdKDQ8/lKflaz12ds4e+hBxFsIYQ7fM1W/OHPyYktIZuiagLVt9cxgRucNPGvgPZlq/e/4C3wBoAXSrzY2Qd2AAAAAElFTkSuQmCC');
 }
-li:hover > #RESSearchMenuItem {
+li:hover > #RESResearchSearchMenuItem {
 	border-color: #369;
 	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAEJGlDQ1BJQ0MgUHJvZmlsZQAAOBGFVd9v21QUPolvUqQWPyBYR4eKxa9VU1u5GxqtxgZJk6XtShal6dgqJOQ6N4mpGwfb6baqT3uBNwb8AUDZAw9IPCENBmJ72fbAtElThyqqSUh76MQPISbtBVXhu3ZiJ1PEXPX6yznfOec7517bRD1fabWaGVWIlquunc8klZOnFpSeTYrSs9RLA9Sr6U4tkcvNEi7BFffO6+EdigjL7ZHu/k72I796i9zRiSJPwG4VHX0Z+AxRzNRrtksUvwf7+Gm3BtzzHPDTNgQCqwKXfZwSeNHHJz1OIT8JjtAq6xWtCLwGPLzYZi+3YV8DGMiT4VVuG7oiZpGzrZJhcs/hL49xtzH/Dy6bdfTsXYNY+5yluWO4D4neK/ZUvok/17X0HPBLsF+vuUlhfwX4j/rSfAJ4H1H0qZJ9dN7nR19frRTeBt4Fe9FwpwtN+2p1MXscGLHR9SXrmMgjONd1ZxKzpBeA71b4tNhj6JGoyFNp4GHgwUp9qplfmnFW5oTdy7NamcwCI49kv6fN5IAHgD+0rbyoBc3SOjczohbyS1drbq6pQdqumllRC/0ymTtej8gpbbuVwpQfyw66dqEZyxZKxtHpJn+tZnpnEdrYBbueF9qQn93S7HQGGHnYP7w6L+YGHNtd1FJitqPAR+hERCNOFi1i1alKO6RQnjKUxL1GNjwlMsiEhcPLYTEiT9ISbN15OY/jx4SMshe9LaJRpTvHr3C/ybFYP1PZAfwfYrPsMBtnE6SwN9ib7AhLwTrBDgUKcm06FSrTfSj187xPdVQWOk5Q8vxAfSiIUc7Z7xr6zY/+hpqwSyv0I0/QMTRb7RMgBxNodTfSPqdraz/sDjzKBrv4zu2+a2t0/HHzjd2Lbcc2sG7GtsL42K+xLfxtUgI7YHqKlqHK8HbCCXgjHT1cAdMlDetv4FnQ2lLasaOl6vmB0CMmwT/IPszSueHQqv6i/qluqF+oF9TfO2qEGTumJH0qfSv9KH0nfS/9TIp0Wboi/SRdlb6RLgU5u++9nyXYe69fYRPdil1o1WufNSdTTsp75BfllPy8/LI8G7AUuV8ek6fkvfDsCfbNDP0dvRh0CrNqTbV7LfEEGDQPJQadBtfGVMWEq3QWWdufk6ZSNsjG2PQjp3ZcnOWWing6noonSInvi0/Ex+IzAreevPhe+CawpgP1/pMTMDo64G0sTCXIM+KdOnFWRfQKdJvQzV1+Bt8OokmrdtY2yhVX2a+qrykJfMq4Ml3VR4cVzTQVz+UoNne4vcKLoyS+gyKO6EHe+75Fdt0Mbe5bRIf/wjvrVmhbqBN97RD1vxrahvBOfOYzoosH9bq94uejSOQGkVM6sN/7HelL4t10t9F4gPdVzydEOx83Gv+uNxo7XyL/FtFl8z9ZAHF4bBsrEwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAPBJREFUOBGlkTEKAjEQRTciIth4HkvRA9jYCR7AwisICvZiZ6X9NlvYW1gIFp5AT2Eh6PpGMjLuBkUy8JmZ5P+fZOLyPE9iohIjFm20QTV0A+dch/UeqIMtSHnqg1wOmYEFjAkQ8hHswA1sQM3ytC6KWxBlqqM3IUna9GIy1DWbiwYziGdLkJpIQVZclz40REbgnKhMSB/+b+sKSZ8wpnb+9C71FQwsV+uPJ3iBDFFOO4E9uPt+TW6oUHPJwJvINy7BCvTBAohpBpoqfnFt861GOPUmc8vTd7L3O5it3OaCwUHZfxmoyObQN9r9n3W0wRPmWv0jZnGemgAAAABJRU5ErkJggg==');
 }
-#RESSearchMenuItem:hover {
+#RESResearchSearchMenuItem:hover {
 	background-color: #C8DBEC;
 }
 .outdated {
@@ -748,7 +748,7 @@ li:hover > #RESSearchMenuItem {
 	margin-right: 15px;
 	margin-top: 5px;
 }
-#RESNotifications {
+#RESResearchNotifications {
 	position: fixed;
 	top: 0;
 	right: 10px;
@@ -757,7 +757,7 @@ li:hover > #RESSearchMenuItem {
 	background: none;
 	z-index: 100000150 !important;
 }
-.RESNotification {
+.RESResearchNotification {
 	opacity: 0;
 	position: relative;
 	font: 12px/14px Arial, Helvetica, Verdana, sans-serif;
@@ -770,29 +770,29 @@ li:hover > #RESSearchMenuItem {
 	background-color: #fff;
 	z-index: 100;
 }
-.RESNotification a {
+.RESResearchNotification a {
 	color: orangered;
 }
-.RESNotification a:hover {
+.RESResearchNotification a:hover {
 	text-decoration: underline;
 }
-.RESNotification.timerOn {
+.RESResearchNotification.timerOn {
 	border: 1px solid #c7c7c7;
 }
-.RESNotificationContent {
+.RESResearchNotificationContent {
 	overflow: auto;
 	padding: 10px;
 	padding-bottom: 0;
 	color: #999;
 }
-.RESNotificationFooter {
+.RESResearchNotificationFooter {
 	padding: 10px;
 }
-.RESNotificationContent h2 {
+.RESResearchNotificationContent h2 {
 	color: #000;
 	margin-bottom: 10px;
 }
-.RESNotificationHeader {
+.RESResearchNotificationHeader {
 	padding-left: 10px;
 	padding-right: 50px;
 	background-color: #f0f3fc;
@@ -800,24 +800,24 @@ li:hover > #RESSearchMenuItem {
 	height: 38px;
 }
 
-.RESNotification .RESNotificationToggle {
+.RESResearchNotification .RESResearchNotificationToggle {
 	margin-top: 0.5em;
 	font-size: smaller;
 	font-weight: normal;
 }
-.RESNotificationHeader .gearIcon { float: right; }
-.RESNotificationHeader h3 {
+.RESResearchNotificationHeader .gearIcon { float: right; }
+.RESResearchNotificationHeader h3 {
 	padding-top: 12px;
 	font-size: 15px;
 }
-.RESNotificationClose {
+.RESResearchNotificationClose {
 	position: absolute;
 	right: 0;
 	top: 0;
 	margin-right: 12px;
 	margin-top: 6px;
 }
-a.RESNotificationButtonBlue {
+a.RESResearchNotificationButtonBlue {
 	clear: both;
 	float: right;
 	cursor: pointer;
@@ -872,7 +872,7 @@ a.RESNotificationButtonBlue {
 	border-radius: 3px;
 	background-color: #ff5757;
 }
-.RESButton {
+.RESResearchButton {
 	margin: 5px;
 	padding: 3px;
 	border: 1px solid #999;
@@ -880,11 +880,11 @@ a.RESNotificationButtonBlue {
 	cursor: pointer;
 	border-radius: 5px;
 }
-.RESButton:hover {
+.RESResearchButton:hover {
 	background-color: #DDD;
 }
 /* Stuff added to force specificty */
-span.RESCharCounter {
+span.RESResearchCharCounter {
 	color: gray;
 	float: right;
 	font-size: 15px;
@@ -892,12 +892,12 @@ span.RESCharCounter {
 	margin-bottom: -2px;
 }
 
-span.RESCharCounter.tooLong {
+span.RESResearchCharCounter.tooLong {
 	color: red;
 }
 
 /* Big Editor */
-body.RESScrollLock {
+body.RESResearchScrollLock {
 	height: 100%;
 	overflow: hidden;
 }
@@ -919,7 +919,7 @@ body.RESScrollLock {
 	box-sizing: border-box;
 	overflow: hidden;
 }
-#BigEditor .RESDialogContents {
+#BigEditor .RESResearchDialogContents {
 	position: absolute !important;
 	top: 0;
 	bottom: 0;
@@ -938,13 +938,13 @@ body.RESScrollLock {
 #BigEditor > div {
 	margin: 1em .5em;
 }
-.BELeft .RESDialogContents {
+.BELeft .RESResearchDialogContents {
 	padding-bottom: 7.5em;
 	left: 0;
 	right: 0;
 	margin: 0em 1em 0em 1em;
 }
-.BERight .RESDialogContents, .BERight .RESDialogContents.wiki-page-content {
+.BERight .RESResearchDialogContents, .BERight .RESResearchDialogContents.wiki-page-content {
 	overflow: auto;
 	padding: 12px;
 	margin: 4em 1em 1em 0em;
@@ -975,7 +975,7 @@ div + #BigText {
 .BESideHide {
 	display: none;
 }
-.RESFadeButton {
+.RESResearchFadeButton {
 	pointer-events: auto;
 	right: 38px;
 	font-family: Webdings;
@@ -986,7 +986,7 @@ div + #BigText {
 	box-sizing: border-box;
 }
 
-.content .RESBigEditorPop {
+.content .RESResearchBigEditorPop {
 	float: right;
 	margin: 3px 0 0 12px;
 	color: #333;
@@ -999,10 +999,10 @@ div + #BigText {
 	background-position: 4px 50%;
 	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA/ppVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ1dWlkOjY1RTYzOTA2ODZDRjExREJBNkUyRDg4N0NFQUNCNDA3IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjRGQkU3MTYwRkVBMjExRTFCNkYwODQ2MzkzQkU0QzU4IiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjRGQkU3MTVGRkVBMjExRTFCNkYwODQ2MzkzQkU0QzU4IiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIElsbHVzdHJhdG9yIENTNiAoTWFjaW50b3NoKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjAxODAxMTc0MDcyMDY4MTE4MDgzRUZFRDQ2NDFEODMyIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjAyODAxMTc0MDcyMDY4MTE4MDgzRTdGNDQzQTE0MUI2Ii8+IDxkYzp0aXRsZT4gPHJkZjpBbHQ+IDxyZGY6bGkgeG1sOmxhbmc9IngtZGVmYXVsdCI+Z2x5cGhpY29uc19oYWxmbGluZ3M8L3JkZjpsaT4gPC9yZGY6QWx0PiA8L2RjOnRpdGxlPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsexWb8AAACvSURBVHjalFGBDcIgEHxYwAG0naFuwCbtBjIKbgCbsIHO0LhAJ8B788SHGpNecsA9z8M9ZhjOhb5I6/palKZxvERMc9WWWgTao4n1BzIqTqo6r3N/IIFXcANPoH7SIrFNchKVUj6ElwkMVat44L2qDQ9HYOkgrDYI7rrEMd0Ig/dFaV0Wg3f8ha/JmG5i2oHeyqc8VDeiuiCq7nHO3HtwqP6sQtbun2n/w2cTewswAPjfRfYSqgHwAAAAAElFTkSuQmCC);
 }
-button.RESBigEditorPop:hover {
+button.RESResearchBigEditorPop:hover {
 	background-color: #ddd; 
 }
-.wiki-page .RESBigEditorPop {
+.wiki-page .RESResearchBigEditorPop {
 	margin: 6px 20px 0 0;
 }
 #autocomplete_dropdown {
@@ -1060,25 +1060,25 @@ img {
 
 .madeVisible { clear: left; display: block; overflow: hidden; }
 .madeVisible a { display: inline-block; overflow: hidden; }
-.RESImage { display: block !important;  }
-.RESImage.loaded { position: absolute;  }
-.RESImagePlaceholder { float: left; display: block !important; }
-.RESdupeimg { color: #000; font-size: 10px;  }
-.RESClear { clear: both; margin-bottom: 10px;  }
+.RESResearchImage { display: block !important;  }
+.RESResearchImage.loaded { position: absolute;  }
+.RESResearchImagePlaceholder { float: left; display: block !important; }
+.RESResearchdupeimg { color: #000; font-size: 10px;  }
+.RESResearchClear { clear: both; margin-bottom: 10px;  }
 
-.RESGalleryControls a { cursor: pointer; display: inline-block; background-image: url("https://s3.amazonaws.com/e.thumbs.redditmedia.com/r22WT2K4sio9Bvev.png"); width: 16px; height: 16px; margin: 5px; }
-.RESGalleryControls span { position: relative; top: -9px; }
-.RESGalleryControls .previous { background-position: 0 -352px; }
-.RESGalleryControls .next { background-position: 16px -352px; }
-.RESGalleryControls .next,.RESGalleryControls .previous {
+.RESResearchGalleryControls a { cursor: pointer; display: inline-block; background-image: url("https://s3.amazonaws.com/e.thumbs.redditmedia.com/r22WT2K4sio9Bvev.png"); width: 16px; height: 16px; margin: 5px; }
+.RESResearchGalleryControls span { position: relative; top: -9px; }
+.RESResearchGalleryControls .previous { background-position: 0 -352px; }
+.RESResearchGalleryControls .next { background-position: 16px -352px; }
+.RESResearchGalleryControls .next,.RESResearchGalleryControls .previous {
 	user-select: none;
 	-webkit-user-select: none;
 	-moz-user-select: none;
 }
-.RESGalleryControls .end { background-position-y: -336px; }
-.RESGalleryControls .previous:hover { background-position: 0 -320px; }
-.RESGalleryControls .next:hover { background-position: 16px -320px; }
-.RESGalleryControls .end:hover { background-position-y: -304px; }
+.RESResearchGalleryControls .end { background-position-y: -336px; }
+.RESResearchGalleryControls .previous:hover { background-position: 0 -320px; }
+.RESResearchGalleryControls .next:hover { background-position: 16px -320px; }
+.RESResearchGalleryControls .end:hover { background-position-y: -304px; }
 
 .imgTitle {
 	font-size: 13px;
@@ -1089,8 +1089,8 @@ img {
 	padding: 2px;
 }
 .thing .title.visited { color: #551A8B; }
-.RESImage.RESImageError {content: "";}
-.RESImage.RESImageError:after {
+.RESResearchImage.RESResearchImageError {content: "";}
+.RESResearchImage.RESResearchImageError:after {
 	content:"Loading of image " attr(src) " failed. Click to view directly";
 }
 .usertext iframe {
@@ -1098,9 +1098,9 @@ img {
 }
 
 /* modules['showParent'] - show parent hover */
-.RESHoverHighlight { background-color: lightblue; }
-.res-parents-down .RESHoverHighlight { cursor: se-resize; }
-.res-parents-up .RESHoverHighlight { cursor: ne-resize; }
+.RESResearchHoverHighlight { background-color: lightblue; }
+.res-parents-down .RESResearchHoverHighlight { cursor: se-resize; }
+.res-parents-up .RESResearchHoverHighlight { cursor: ne-resize; }
 #parentCommentContainer {
 	border: 1px solid #666;
 	background-color:#fff;
@@ -1136,7 +1136,7 @@ a.bylink.parentlink {
 	content: attr(data-text); 
 }
 
-.RESThrobber, .RESThrobber:before, .RESThrobber:after {
+.RESResearchThrobber, .RESResearchThrobber:before, .RESResearchThrobber:after {
 	font-size: 0;
     position: relative;
     display: inline-block;
@@ -1145,36 +1145,36 @@ a.bylink.parentlink {
     width: 30px;
     border-radius: 50%;
     box-shadow: inset 0 0 5px 1px #222;
-    -moz-animation: RESThrobber 1400ms 400ms infinite linear;
-    -webkit-animation: RESThrobber 1400ms 400ms infinite linear;
-    animation: RESThrobber 1400ms 400ms infinite linear;
+    -moz-animation: RESResearchThrobber 1400ms 400ms infinite linear;
+    -webkit-animation: RESResearchThrobber 1400ms 400ms infinite linear;
+    animation: RESResearchThrobber 1400ms 400ms infinite linear;
 }
-.RESThrobber {
+.RESResearchThrobber {
 	margin: 0 35px -7.5px;
 }
 
-.RESThrobber:before {
+.RESResearchThrobber:before {
     left: -115%;
     -moz-animation-delay: 200ms;
     -webkit-animation-delay: 200ms;
     animation-delay: 200ms;
 }
-.RESThrobber:after {
+.RESResearchThrobber:after {
     left: 115%;
     -moz-animation-delay: 600ms;
     -webkit-animation-delay: 600ms;
     animation-delay: 600ms;
 }
-.RESThrobber:before, .RESThrobber:after {
+.RESResearchThrobber:before, .RESResearchThrobber:after {
     content: '';
     position: absolute;
     top: 0;
 }
-@-webkit-keyframes RESThrobber {
+@-webkit-keyframes RESResearchThrobber {
     30% { background: transparent; }
     70% { background: transparent; }
 }
-@keyframes RESThrobber {
+@keyframes RESResearchThrobber {
     30% { background: transparent; }
     70% { background: transparent; }
 }
