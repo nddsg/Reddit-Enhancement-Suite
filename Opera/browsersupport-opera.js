@@ -476,7 +476,7 @@ BrowserStrategy.RESResearchInitReadyCheck = function(RESResearchInit) {
 		// save Reddit's jQuery, because this script is going to jack it up.
 		// now, take the new jQuery in and store it local to RESResearch's scope (it's a var up top)
 		var redditJq = window.$;
-		require(['jquery-1.10.2.min', 'guiders-1.2.8', 'tinycon', 'snuownd', 'jquery.dragsort-0.6', 'jquery.tokeninput', 'jquery-fieldselection.min'], function() {
+		require(['jquery-1.11.1.min', 'guiders-1.2.8', 'favico', 'snuownd', 'jquery.dragsort-0.6', 'jquery.tokeninput', 'jquery-fieldselection.min'], function() {
 			RESResearchInit();
 		});
 	} else {
@@ -496,6 +496,14 @@ BrowserStrategy.getOutlineProperty = function() {
 BrowserStrategy.openNewWindow = function (thisHREF) {
 	var thisJSON = {
 		requestType: 'keyboardNav',
+		linkURL: thisHREF
+	};
+	opera.extension.postMessage(JSON.stringify(thisJSON));
+};
+
+BrowserStrategy.openLinkInNewTab = function (thisHREF) {
+	var thisJSON = {
+		requestType: 'openLinkInNewTab',
 		linkURL: thisHREF
 	};
 	opera.extension.postMessage(JSON.stringify(thisJSON));

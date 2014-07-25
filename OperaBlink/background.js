@@ -1,18 +1,18 @@
 /*
 
 	RES is released under the GPL. However, I do ask a favor (obviously I don't/can't require it, I ask out of courtesy):
-	
+
 	Because RES auto updates and is hosted from a central server, I humbly request that if you intend to distribute your own
 	modified Reddit Enhancement Suite, you name it something else and make it very clear to your users that it's your own
 	branch and isn't related to mine.
-	
-	RES is updated very frequently, and I get lots of tech support questions/requests from people on outdated versions. If 
-	you're distributing RES via your own means, those recipients won't always be on the latest and greatest, which makes 
-	it harder for me to debug things and understand (at least with browsers that auto-update) whether or not people are on 
+
+	RES is updated very frequently, and I get lots of tech support questions/requests from people on outdated versions. If
+	you're distributing RES via your own means, those recipients won't always be on the latest and greatest, which makes
+	it harder for me to debug things and understand (at least with browsers that auto-update) whether or not people are on
 	a current version of RES.
-	
+
 	I can't legally hold you to any of this - I'm just asking out of courtesy.
-	
+
 	Thanks, I appreciate your consideration.  Without further ado, the all-important GPL Statement:
 
     This program is free software: you can redistribute it and/or modify
@@ -89,6 +89,16 @@ var XHRCache = {
 	}
 };
 
+
+var handlePageActionClick = function(event) {
+	chrome.tabs.sendMessage(event.id, { requestType: 'subredditStyle', action: 'toggle'  }, function(response) {
+		// we don't really need to do anything here.
+		console.log(response);
+	});
+}
+
+chrome.pageAction.onClicked.addListener(handlePageActionClick);
+
 chrome.runtime.onMessage.addListener(
 	function(request, sender, sendResponse) {
 		var xhr, button, newIndex, thisLinkURL;
@@ -128,7 +138,7 @@ chrome.runtime.onMessage.addListener(
 				return true;
 				break;
 			case 'singleClick':
-				button = (request.button !== 1) || (request.ctrl !== 1);
+				button = (request.button !== 1) && (request.ctrl !== 1);
 				// Get the selected tab so we can get the index of it.  This allows us to open our new tab as the "next" tab.
 				newIndex = sender.tab.index + 1;
 				// handle requests from singleClick module
@@ -237,6 +247,35 @@ chrome.runtime.onMessage.addListener(
 				switch (request.operation) {
 					case 'clear':
 						XHRCache.clear();
+						break;
+				}
+				break;
+			case 'pageAction':
+				switch (request.action) {
+					case 'show':
+						// we intentionally fall through after this to stateChange
+						chrome.pageAction.show(sender.tab.id);
+					case 'stateChange':
+						if (request.visible) {
+							chrome.pageAction.setIcon({
+								tabId: sender.tab.id,
+								path: {
+									19: 'images/css-on-small.png',
+									38: 'images/css-on.png'
+								}
+							});
+						} else {
+							chrome.pageAction.setIcon({
+								tabId: sender.tab.id,
+								path: {
+									19: 'images/css-off-small.png',
+									38: 'images/css-off.png'
+								}
+							});
+						}
+						break;
+					case 'hide':
+						chrome.pageAction.hide(sender.tab.id);
 						break;
 				}
 				break;

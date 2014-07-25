@@ -1,6 +1,6 @@
 {
 	"name": "RESR",
-	"version": "1",
+	"version": "0.0.0.1",
 	"manifest_version": 2,
 	"minimum_chrome_version": "26.0",
 	"description": "Reddit Research",
@@ -18,11 +18,11 @@
 				"https://*.reddit.com/*"
 			],
 			"js": [
-				"jquery-1.10.2.min.js",
+				"jquery-1.11.1.min.js",
 				"guiders-1.2.8.js",
 				"jquery.dragsort-0.6.js",
 				"jquery-fieldselection.min.js",
-				"tinycon.js",
+				"favico.js",
 				"jquery.tokeninput.js",
 				"HTMLPasteurizer.js",
 				"snuownd.js",
@@ -31,6 +31,7 @@
 				"browsersupport-chrome.js",
 				"console.js",
 				"alert.js",
+				"migrate.js",
 				"storage.js",
 				"template.js",
 				"hogan-2.0.0.js",
@@ -40,6 +41,7 @@
         "modules/settingsNavigation.js",
         "modules/styleTweaks.js",
 				"modules/resr.js",
+
 				"init.js"
 			],
 			"css": [
@@ -55,12 +57,18 @@
 		}
 	],
 	"web_accessible_resources": [
-		"jquery-1.10.2.min.map",
 		"templates.html"
 	],
 	"icons": {
 		"48": "icon48.png",
 		"128": "icon128.png"
+	},
+	"page_action": {
+		"default_icon": {
+			"19": "images/css-on-small.png",
+			"38": "images/css-on.png"
+		},
+		"default_title": "Subreddit Style On"
 	},
 	"permissions": [
 		"cookies",
