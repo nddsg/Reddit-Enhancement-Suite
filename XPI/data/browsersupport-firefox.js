@@ -2,8 +2,8 @@
 self.on('message', function(msgEvent) {
 	switch (msgEvent.name) {
 		case 'readResource':
-			window.RESLoadCallbacks[msgEvent.transaction](msgEvent.data);
-			delete window.RESLoadCallbacks[msgEvent.transaction];
+			window.RESResearchLoadCallbacks[msgEvent.transaction](msgEvent.data);
+			delete window.RESResearchLoadCallbacks[msgEvent.transaction];
 			break;
 		case 'GM_xmlhttpRequest':
 			// Fire the appropriate onload function for this xmlhttprequest.
@@ -12,7 +12,7 @@ self.on('message', function(msgEvent) {
 		case 'compareVersion':
 			var forceUpdate = false;
 			if (typeof msgEvent.message.forceUpdate !== 'undefined') forceUpdate = true;
-			RESUtils.compareVersion(msgEvent.message, forceUpdate);
+			RESResearchUtils.compareVersion(msgEvent.message, forceUpdate);
 			break;
 		case 'loadTweet':
 			var tweet = msgEvent.response;
@@ -22,7 +22,7 @@ self.on('message', function(msgEvent) {
 			thisExpando.classList.add('twitterLoaded');
 			break;
 		case 'getLocalStorage':
-			// Does RESStorage have actual data in it?  If it doesn't, they're a legacy user, we need to copy
+			// Does RESResearchStorage have actual data in it?  If it doesn't, they're a legacy user, we need to copy
 			// old school localStorage from the foreground page to the background page to keep their settings...
 			if (typeof msgEvent.message.importedFromForeground === 'undefined') {
 				// it doesn't exist.. copy it over...
@@ -32,16 +32,16 @@ self.on('message', function(msgEvent) {
 				};
 				self.postMessage(thisJSON);
 			} else {
-				setUpRESStorage(msgEvent.message);
-				//RESInit();
+				setUpRESResearchStorage(msgEvent.message);
+				//RESResearchInit();
 			}
 			break;
 		case 'saveLocalStorage':
 			// Okay, we just copied localStorage from foreground to background, let's set it up...
-			setUpRESStorage(msgEvent.message);
+			setUpRESResearchStorage(msgEvent.message);
 			break;
 		case 'localStorage':
-			RESStorage.setItem(msgEvent.itemName, msgEvent.itemValue, true);
+			RESResearchStorage.setItem(msgEvent.itemName, msgEvent.itemValue, true);
 			break;
 		default:
 			// console.log('unknown event type in self.on');
@@ -114,13 +114,13 @@ BrowserStrategy.localStorageTest = function() {
 	// if so, present them with a notification explaining that they should download a new script so they can
 	// copy their old settings...
 
-	if ((localStorage.getItem('RES.lsTest') === 'test') && (localStorage.getItem('copyComplete') !== 'true')) {
-		modules['notifications'].showNotification('<h2>Important Alert for Greasemonkey Users!</h2>Hey! It looks like you have upgraded to RES 4.0, but used to use the Greasemonkey version of RES. You\'re going to see double until you uninstall the Greasemonkey script. However, you should first copy your settings by clicking the blue button. <b>After installing, refresh this page!</b> <a target="_blank" class="RESNotificationButtonBlue" href="http://redditenhancementsuite.com/gmutil/reddit_enhancement_suite.user.js">GM->FF Import Tool</a>', 15000);
-		localStorage.removeItem('RES.lsTest');
+	if ((localStorage.getItem('RESResearch.lsTest') === 'test') && (localStorage.getItem('copyComplete') !== 'true')) {
+		modules['notifications'].showNotification('<h2>Important Alert for Greasemonkey Users!</h2>Hey! It looks like you have upgraded to RESResearch 4.0, but used to use the Greasemonkey version of RESResearch. You\'re going to see double until you uninstall the Greasemonkey script. However, you should first copy your settings by clicking the blue button. <b>After installing, refresh this page!</b> <a target="_blank" class="RESResearchNotificationButtonBlue" href="http://redditenhancementsuite.com/gmutil/reddit_enhancement_suite.user.js">GM->FF Import Tool</a>', 15000);
+		localStorage.removeItem('RESResearch.lsTest');
 
 		// this is the only "old school" DOMNodeInserted event left... note to readers of this source code:
-		// it will ONLY ever be added to the DOM in the specific instance of former OLD RES users from Greasemonkey
-		// who haven't yet had the chance to copy their settings to the XPI version of RES.  Once they've completed
+		// it will ONLY ever be added to the DOM in the specific instance of former OLD RESResearch users from Greasemonkey
+		// who haven't yet had the chance to copy their settings to the XPI version of RESResearch.  Once they've completed
 		// that, this eventlistener will never be added again, nor will it be added for those who are not in this
 		// odd/small subset of people.
 		document.body.addEventListener('DOMNodeInserted', function(event) {
@@ -133,9 +133,9 @@ BrowserStrategy.localStorageTest = function() {
 
 BrowserStrategy.storageSetup = function(thisJSON) {
 	var transactions = 0;
-	window.RESLoadCallbacks = [];
-	RESLoadResourceAsText = function(filename, callback) {
-		window.RESLoadCallbacks[transactions] = callback;
+	window.RESResearchLoadCallbacks = [];
+	RESResearchLoadResourceAsText = function(filename, callback) {
+		window.RESResearchLoadCallbacks[transactions] = callback;
 		self.postMessage({ requestType: 'readResource', filename: filename, transaction: transactions });
 		transactions++;
 	};
@@ -143,10 +143,10 @@ BrowserStrategy.storageSetup = function(thisJSON) {
 	self.postMessage(thisJSON);
 };
 
-BrowserStrategy.RESInitReadyCheck = (function() {
-	var original = BrowserStrategy.RESInitReadyCheck;
+BrowserStrategy.RESResearchInitReadyCheck = (function() {
+	var original = BrowserStrategy.RESResearchInitReadyCheck;
 
-	return function(RESInit) {
+	return function(RESResearchInit) {
 		// firefox addon sdk... we've included jQuery...
 		// also, for efficiency, we're going to try using unsafeWindow for "less secure" (but we're not going 2 ways here, so that's OK) but faster DOM node access...
 		document = unsafeWindow.document;
@@ -155,10 +155,25 @@ BrowserStrategy.RESInitReadyCheck = (function() {
 			console.log('Uh oh, something has gone wrong loading jQuery...');
 		}
 
-		original(RESInit);
+		original(RESResearchInit);
 	}
 })();
 
+BrowserStrategy.openInNewWindow = function(thisHREF) {
+	var thisJSON = {
+		requestType: 'keyboardNav',
+		linkURL: thisHREF
+	};
+	self.postMessage(thisJSON);
+};
+
+BrowserStrategy.openLinkInNewTab = function(thisHREF) {
+	var thisJSON = {
+		requestType: 'openLinkInNewTab',
+		linkURL: thisHREF
+	};
+	self.postMessage(thisJSON);
+};
 
 BrowserStrategy.sendMessage = function(thisJSON) {
 	self.postMessage(thisJSON);
