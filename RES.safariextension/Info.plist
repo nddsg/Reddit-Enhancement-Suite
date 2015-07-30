@@ -3,19 +3,19 @@
 <plist version="1.0">
 <dict>
 	<key>Author</key>
-	<string>Steve Sobel</string>
+	<string>resresearch.org</string>
 	<key>Builder Version</key>
-	<string>9537.77.4</string>
+	<string>534.57.2</string>
 	<key>CFBundleDisplayName</key>
-	<string>Reddit Enhancement Suite</string>
+	<string>RESResearch</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.honestbleeps.redditenhancementsuite</string>
+	<string>org.resresearch.resr</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
-	<string>4.5.0.2</string>
+	<string>0.0.0.1</string>
 	<key>CFBundleVersion</key>
-	<string>4.5.0.2</string>
+	<string>0.0.0.1</string>
 	<key>Chrome</key>
 	<dict>
 		<key>Database Quota</key>
@@ -50,51 +50,15 @@
 				<string>mediacrush.js</string>
 				<string>gfycat.js</string>
 				<string>reddit_enhancement_suite.user.js</string>
-				<string>modules/betteReddit.js</string>
-				<string>modules/userTagger.js</string>
-				<string>modules/keyboardNav.js</string>
-				<string>modules/commandLine.js</string>
-				<string>modules/about.js</string>
-				<string>modules/hover.js</string>
-				<string>modules/subredditTagger.js</string>
-				<string>modules/singleClick.js</string>
-				<string>modules/commentPreview.js</string>
-				<string>modules/commentTools.js</string>
-				<string>modules/sortCommentsTemporarily.js</string>
-				<string>modules/usernameHider.js</string>
-				<string>modules/showImages.js</string>
-				<string>modules/showKarma.js</string>
-				<string>modules/hideChildComments.js</string>
-				<string>modules/showParent.js</string>
-				<string>modules/neverEndingReddit.js</string>
-				<string>modules/saveComments.js</string>
-				<string>modules/userHighlight.js</string>
-				<string>modules/nightMode.js</string>
-				<string>modules/styleTweaks.js</string>
-				<string>modules/userbarHider.js</string>
-				<string>modules/accountSwitcher.js</string>
-				<string>modules/filteReddit.js</string>
-				<string>modules/newCommentCount.js</string>
-				<string>modules/spamButton.js</string>
-				<string>modules/commentNavigator.js</string>
-				<string>modules/subredditManager.js</string>
-				<string>modules/RESTips.js</string>
-				<string>modules/settingsNavigation.js</string>
-				<string>modules/dashboard.js</string>
-				<string>modules/notifications.js</string>
-				<string>modules/subredditInfo.js</string>
-				<string>modules/commentHidePersistor.js</string>
-				<string>modules/bitcointip.js</string>
-				<string>modules/troubleshooter.js</string>
-				<string>modules/localDate.js</string>
-				<string>modules/context.js</string>
 				<string>modules/resr.js</string>
+				<string>modules/settingsNavigation.js</string>
+				<string>modules/styleTweaks.js</string>
 				<string>init.js</string>
 			</array>
 		</dict>
 	</dict>
 	<key>Description</key>
-	<string>Reddit Enhancement Suite is a collection of tools to enhance your Reddit browsing experience</string>
+	<string>RESR is a utility that allows individuals to participate in the Reddit Research project, administered by the University of Notre Dame.</string>
 	<key>ExtensionInfoDictionaryVersion</key>
 	<string>1.0</string>
 	<key>Permissions</key>
@@ -105,19 +69,8 @@
 			<array>
 				<string>reddit.com</string>
 				<string>*.reddit.com</string>
-				<string>redditgifts.com</string>
-				<string>api.twitter.com</string>
-				<string>api.imgur.com</string>
-				<string>min.us</string>
-				<string>*.flickr.com</string>
-				<string>img.photobucket.com</string>
-				<string>gdata.youtube.com</string>
-				<string>redditenhancementsuite.com</string>
-				<string>backend.deviantart.com</string>
-				<string>api.tumblr.com</string>
-				<string>noembed.com</string>
-				<string>mediacru.sh</string>
 				<string>resresearch.org</string>
+				<string>*.resresearch.org</string>
 			</array>
 			<key>Include Secure Pages</key>
 			<true/>
@@ -125,9 +78,7 @@
 			<string>Some</string>
 		</dict>
 	</dict>
-	<key>Update Manifest URL</key>
-	<string>http://redditenhancementsuite.com/update-safari.plist</string>
 	<key>Website</key>
-	<string>http://redditenhancementsuite.com/</string>
+	<string>http://resresearch.org</string>
 </dict>
 </plist>
