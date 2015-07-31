@@ -2,11 +2,11 @@
 	"name": "resresearch",
 	"license": "GPL",
 	"author": "resresearch",
-	"version": "0.0.0.1",
+	"version": "0.0.0.2",
 	"fullName": "RESResearch",
 	"id": "jid1-123ko0itXqBu7w",
 	"description": "Reddit Research",
-  "homepage": "http://resresearch.org",
+  "homepage": "https://dsg.nd.edu",
   "icon": "icon64.png",
 	"permissions": {
 		"private-browsing": true

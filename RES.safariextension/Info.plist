@@ -9,13 +9,13 @@
 	<key>CFBundleDisplayName</key>
 	<string>RESResearch</string>
 	<key>CFBundleIdentifier</key>
-	<string>org.resresearch.resr</string>
+	<string>edu.nd.dsg</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
-	<string>0.0.0.1</string>
+	<string>0.0.0.2</string>
 	<key>CFBundleVersion</key>
-	<string>0.0.0.1</string>
+	<string>0.0.0.2</string>
 	<key>Chrome</key>
 	<dict>
 		<key>Database Quota</key>
@@ -29,7 +29,7 @@
 		<dict>
 			<key>Start</key>
 			<array>
-				<string>jquery-1.11.1.min.js</string>
+				<string>jquery-1.11.3.min.js</string>
 				<string>guiders-1.2.8.js</string>
 				<string>jquery.dragsort-0.6.js</string>
 				<string>jquery-fieldselection.min.js</string>
@@ -46,9 +46,7 @@
 				<string>migrate.js</string>
 				<string>storage.js</string>
 				<string>template.js</string>
-				<string>konami.js</string>
 				<string>mediacrush.js</string>
-				<string>gfycat.js</string>
 				<string>reddit_enhancement_suite.user.js</string>
 				<string>modules/resr.js</string>
 				<string>modules/settingsNavigation.js</string>
@@ -70,7 +68,7 @@
 				<string>reddit.com</string>
 				<string>*.reddit.com</string>
 				<string>resresearch.org</string>
-				<string>*.resresearch.org</string>
+				<string>dsg.nd.edu</string>
 			</array>
 			<key>Include Secure Pages</key>
 			<true/>
@@ -79,6 +77,6 @@
 		</dict>
 	</dict>
 	<key>Website</key>
-	<string>http://resresearch.org</string>
+	<string>https://dsg.nd.edu/rr</string>
 </dict>
 </plist>
