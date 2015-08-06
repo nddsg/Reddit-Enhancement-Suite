@@ -1,5 +1,5 @@
 // Initialize RES as the DOMContentLoaded event has already been fired
-RESResearchInitReadyCheck();
+RedditResearchInitReadyCheck();
 
 // Close self-invoking anonymous function
 })();

@@ -3,17 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>Author</key>
-	<string>resresearch.org</string>
+	<string>dsg.nd.edu/rr</string>
 	<key>Builder Version</key>
 	<string>534.57.2</string>
 	<key>CFBundleDisplayName</key>
-	<string>RESResearch</string>
+	<string>RedditResearch</string>
 	<key>CFBundleIdentifier</key>
 	<string>edu.nd.dsg</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
-	<string>0.0.0.2</string>
+	<string>0.2</string>
 	<key>CFBundleVersion</key>
 	<string>0.0.0.2</string>
 	<key>Chrome</key>
@@ -48,7 +48,7 @@
 				<string>template.js</string>
 				<string>mediacrush.js</string>
 				<string>reddit_enhancement_suite.user.js</string>
-				<string>modules/resr.js</string>
+				<string>modules/redditresearch.js</string>
 				<string>modules/settingsNavigation.js</string>
 				<string>modules/styleTweaks.js</string>
 				<string>init.js</string>
@@ -56,7 +56,7 @@
 		</dict>
 	</dict>
 	<key>Description</key>
-	<string>RESR is a utility that allows individuals to participate in the Reddit Research project, administered by the University of Notre Dame.</string>
+	<string>RedditResearch is a utility that allows individuals to participate in the Reddit Research project, administered by the University of Notre Dame.</string>
 	<key>ExtensionInfoDictionaryVersion</key>
 	<string>1.0</string>
 	<key>Permissions</key>
@@ -67,7 +67,6 @@
 			<array>
 				<string>reddit.com</string>
 				<string>*.reddit.com</string>
-				<string>resresearch.org</string>
 				<string>dsg.nd.edu</string>
 			</array>
 			<key>Include Secure Pages</key>

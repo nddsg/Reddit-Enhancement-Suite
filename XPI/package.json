@@ -1,12 +1,12 @@
 {
-	"name": "resresearch",
+	"name": "redditresearch",
 	"license": "GPL",
-	"author": "resresearch",
-	"version": "0.0.0.2",
-	"fullName": "RESResearch",
+	"author": "RedditResearch",
+	"version": "0.3",
+	"fullName": "RedditResearch",
 	"id": "jid1-123ko0itXqBu7w",
 	"description": "Reddit Research",
-  "homepage": "https://dsg.nd.edu",
+  "homepage": "https://dsg.nd.edu/rr",
   "icon": "icon64.png",
 	"permissions": {
 		"private-browsing": true

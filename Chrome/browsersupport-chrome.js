@@ -13,27 +13,27 @@ chrome.runtime.onMessage.addListener(
 	function(request, sender, sendResponse) {
 		switch (request.requestType) {
 			case 'localStorage':
-				if (typeof RESResearchStorage.setItem !== 'function') {
-					// if RESResearchStorage isn't ready yet, wait a moment, then try setting again.
-					var waitForRESResearchStorage = function(request) {
-						if ((typeof RESResearchStorage !== 'undefined') && (typeof RESResearchStorage.setItem === 'function')) {
-							RESResearchStorage.setItem(request.itemName, request.itemValue, true);
+				if (typeof RedditResearchStorage.setItem !== 'function') {
+					// if RedditResearchStorage isn't ready yet, wait a moment, then try setting again.
+					var waitForRedditResearchStorage = function(request) {
+						if ((typeof RedditResearchStorage !== 'undefined') && (typeof RedditResearchStorage.setItem === 'function')) {
+							RedditResearchStorage.setItem(request.itemName, request.itemValue, true);
 						} else {
 							setTimeout(function() {
-								waitForRESResearchStorage(request);
+								waitForRedditResearchStorage(request);
 							}, 50);
 						}
 					};
-					waitForRESResearchStorage(request);
+					waitForRedditResearchStorage(request);
 				} else {
-					RESResearchStorage.setItem(request.itemName, request.itemValue, true);
+					RedditResearchStorage.setItem(request.itemName, request.itemValue, true);
 				}
 				break;
 			case 'permissions':
 				// TODO: maybe add a type here? right now only reason is for twitter expandos so text is hard coded, etc.
 				// result will just be true/false here. if false, permission was rejected.
 				if (!request.result) {
-					modules['notifications'].showNotification("You clicked 'Deny'. RESResearch needs permission to access the Twitter API at "+request.data.origins[0]+" for twitter expandos to show twitter posts in-line. Be assured RESResearch does not access any of your information on twitter.com - it only accesses the API.", 10);
+					modules['notifications'].showNotification("You clicked 'Deny'. RedditResearch needs permission to access the Twitter API at "+request.data.origins[0]+" for twitter expandos to show twitter posts in-line. Be assured RedditResearch does not access any of your information on twitter.com - it only accesses the API.", 10);
 					permissionQueue.onloads[request.callbackID](false);
 				} else {
 					permissionQueue.onloads[request.callbackID](true);
@@ -41,7 +41,7 @@ chrome.runtime.onMessage.addListener(
 				break;
 			case 'subredditStyle':
 				var toggle = !modules['styleTweaks'].styleToggleCheckbox.checked;
-				modules['styleTweaks'].toggleSubredditStyle(toggle, RESResearchUtils.currentSubreddit());
+				modules['styleTweaks'].toggleSubredditStyle(toggle, RedditResearchUtils.currentSubreddit());
 				break;
 			default:
 				// sendResponse({status: "unrecognized request type"});
@@ -108,7 +108,7 @@ if (typeof GM_xmlhttpRequest === 'undefined') {
 
 
 BrowserStrategy.storageSetup = function(thisJSON) {
-	RESResearchLoadResourceAsText = function(filename, callback) {
+	RedditResearchLoadResourceAsText = function(filename, callback) {
 		var xhr = new XMLHttpRequest();
 		xhr.onload = function() {
 			if (callback) {
@@ -122,7 +122,7 @@ BrowserStrategy.storageSetup = function(thisJSON) {
 
 	// we've got chrome, get a copy of the background page's localStorage first, so don't init until after.
 	chrome.runtime.sendMessage(thisJSON, function(response) {
-		// Does RESResearchStorage have actual data in it?  If it doesn't, they're a legacy user, we need to copy
+		// Does RedditResearchStorage have actual data in it?  If it doesn't, they're a legacy user, we need to copy
 		// old school localStorage from the foreground page to the background page to keep their settings...
 		if (!response || typeof response.importedFromForeground === 'undefined') {
 			// it doesn't exist.. copy it over...
@@ -137,10 +137,10 @@ BrowserStrategy.storageSetup = function(thisJSON) {
 				data: ls
 			};
 			chrome.runtime.sendMessage(thisJSON, function(response) {
-				setUpRESResearchStorage(response);
+				setUpRedditResearchStorage(response);
 			});
 		} else {
-			setUpRESResearchStorage(response);
+			setUpRedditResearchStorage(response);
 		}
 	});
 };

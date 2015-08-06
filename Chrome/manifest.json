@@ -1,7 +1,7 @@
 {
-	"name": "RESR",
-	"version": "0.0.0.2",
-	"manifest_version": 2,
+	"name": "RedditResearch",
+	"version": "0.3",
+	"manifest_version": 3,
 	"minimum_chrome_version": "26.0",
 	"description": "Reddit Research",
 	"background": {
@@ -36,10 +36,10 @@
 				"template.js",
 				"hogan-2.0.0.js",
 				"mediacrush.js",
-				"reddit_enhancement_suite.user.js",
+				"reddit_research.user.js",
         "modules/settingsNavigation.js",
         "modules/styleTweaks.js",
-				"modules/resr.js",
+				"modules/redditresearch.js",
 
 				"init.js"
 			],

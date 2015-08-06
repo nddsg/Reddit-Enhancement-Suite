@@ -1,7 +1,7 @@
 body.res-console-open {
 	overflow: hidden;
 }
-#RESResearchConsoleContainer {
+#RedditResearchConsoleContainer {
 	visibility: hidden;
 	color: #000;
 	font-size: 12px;
@@ -23,31 +23,31 @@ body.res-console-open {
 	-o-transition: bottom 0.4s;
 	transition: bottom 0.4s;
 }
-#RESResearchConsoleContainer em { font-style: italic; }
-#RESResearchConsoleContainer .handle { cursor: move; }
-#RESResearchConsoleContainer.slideIn {
+#RedditResearchConsoleContainer em { font-style: italic; }
+#RedditResearchConsoleContainer .handle { cursor: move; }
+#RedditResearchConsoleContainer.slideIn {
 	visibility: visible;
 	bottom: 1.5%;
 }
-#RESResearchConsoleContainer.slideOut {
+#RedditResearchConsoleContainer.slideOut {
 	visibility: visible;
 	bottom: 100%;
 	padding: 0;
 }
-#RESResearchConsoleContainer.slideOut #RESConfigPanelOptions {
+#RedditResearchConsoleContainer.slideOut #RESConfigPanelOptions {
 	overflow: hidden; /* try to smooth the transition */
 }
-#RESResearchConsoleContent #contributeContents {
+#RedditResearchConsoleContent #contributeContents {
 	padding-top: 15px;
 }
-#RESResearchConsoleContent #contributeContents p {
+#RedditResearchConsoleContent #contributeContents p {
 	margin-bottom: 20px;
 	font-size: 14px;
 }
-#RESResearchConsoleContent #contributeContents h1 {
+#RedditResearchConsoleContent #contributeContents h1 {
 	margin-top: 40px;
 }
-.RESResearchDonateButton {
+.RedditResearchDonateButton {
 	display: inline-block;
 	background-color: white;
 	color: orangered;
@@ -90,7 +90,7 @@ body.res-console-open {
 	width: auto;
 	height: auto;
 }
-#RESResearchMainGearOverlay {
+#RedditResearchMainGearOverlay {
 	position: absolute;
 	display: none;
 	width: 27px;
@@ -101,7 +101,7 @@ body.res-console-open {
 	border-radius: 3px 3px 0 0;
 	z-index: 10000;
 }
-.RESResearchGearIcon {
+.RedditResearchGearIcon {
 	display: inline-block;
 	width: 15px;
 	height: 15px;
@@ -109,38 +109,38 @@ body.res-console-open {
 	background-repeat: no-repeat;
 	background-position: 0 0;
 }
-.RESResearchGearIcon.newNotification {
+.RedditResearchGearIcon.newNotification {
 	cursor: pointer;
 	background-position: 0px -134px;
 }
-#RESResearchMainGearOverlay .RESResearchGearIcon {
+#RedditResearchMainGearOverlay .RedditResearchGearIcon {
 	position: absolute;
 	top: 3px;
 	left: 6px;
 }
-#RESResearchSettingsButton {
+#RedditResearchSettingsButton {
 	margin: auto;
 	margin-bottom: -2px;
 }
-.RESResearchGearIcon.newNotification {
+.RedditResearchGearIcon.newNotification {
 	cursor: pointer;
 	background-position: 0px -134px;
 }
-#RESResearchMainGearOverlay .RESResearchGearIcon {
+#RedditResearchMainGearOverlay .RedditResearchGearIcon {
 	position: absolute;
 	top: 3px;
 	left: 6px;
 }
-#RESResearchSettingsButton {
+#RedditResearchSettingsButton {
 	margin: auto;
 	margin-bottom: -2px;
 }
-#RESResearchPrefsDropdown {
+#RedditResearchPrefsDropdown {
 	display: none;
 	position: absolute;
 	z-index: 100000006;
 }
-.RESResearchDropdownList {
+.RedditResearchDropdownList {
 	list-style-type: none;
 	background-color: #5f99cf;
 	width: 180px;
@@ -149,7 +149,7 @@ body.res-console-open {
 	border-bottom: none;
 	margin-top: -1px;
 }
-.RESResearchDropdownList li {
+.RedditResearchDropdownList li {
 	cursor: pointer;
 	border-bottom: 1px solid #369;
 	height: 35px;
@@ -158,19 +158,19 @@ body.res-console-open {
 	color: #c9def2;
 	padding-left: 10px;
 }
-.RESResearchDropdownList .toggleButton {
+.RedditResearchDropdownList .toggleButton {
 	float: right;
 	margin-right: 10px;
 	margin-top: 10px;
 	line-height: 10px;
 }
-.RESResearchDropdownList a, .RESResearchDropdownList a:visited {
+.RedditResearchDropdownList a, .RedditResearchDropdownList a:visited {
 	display: inline-block;
 	width: 100%;
 	height: 100%;
 	color: #c9def2;
 }
-.RESResearchDropdownList li:hover, .RESResearchDropdownList li a:hover {
+.RedditResearchDropdownList li:hover, .RedditResearchDropdownList li a:hover {
 	background-color: #9cc6ec;
 	color: #369;
 }
@@ -188,18 +188,18 @@ body.res-console-open {
 	height: 16px;
 	background-image: url(data:image/gif;base64,R0lGODlhEAAQAOZOAP///3F6hcopAJMAAP/M//Hz9OTr8ZqksMTL1P8pAP9MDP9sFP+DIP8zAO7x8/D1/LnEz+vx+Flha+Ln7OLm61hhayk0QCo1QMfR2eDo8b/K1M/U2pqiqcfP15WcpcLK05ymsig0P2lyftnf5naBi8XJzZ6lrJGdqmBqdKissYyZpf/+/puotNzk66ayvtbc4rC7x9Xd5n+KlbG7xpiirnJ+ivDz9KKrtrvH1Ojv9ePq8HF8h2x2gvj9/yYyPmRueFxlb4eRm+71+kFLVdrb3c/X4KOnrYGMl3uGke/0+5Sgq1ZfaY6Xn/X4+f///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAE4ALAAAAAAQABAAAAexgE6CggGFAYOIiAEPEREPh4lOhpOUgwEAmJmaABuQAUktMUUYGhAwLiwnKp41REYmHB5MQUcyN0iQTjsAHU05ICM4SjMQJIg8AAgFBgcvE5gUJYgiycsHDisCApjagj/VzAACBATa5AJOKOAHAAMMDOTvA05A6w7tC/kL804V9uIKAipA52QJgA82dNAQRyBBgwYJyjmRgKmHkAztHA4YAJHfEB8hLFxI0W4AACcbnQQCADs=)
 }
-#openRESResearchPrefs {
+#openRedditResearchPrefs {
 	display: inline-block;
 	height: 100%;
 }
-#RESResearchConsoleHeader {
+#RedditResearchConsoleHeader {
 	width: 100%;
 }
-#RESResearchLogo {
+#RedditResearchLogo {
 	margin-right: 5px;
 	float: left;
 }
-.RESResearchDialogTopBar {
+.RedditResearchDialogTopBar {
 	border-radius: 3px 3px 0 0;
 	position: absolute;
 	top: 0;
@@ -214,22 +214,22 @@ body.res-console-open {
 	background-color: #F0F3FC;
 	float: left;
 }
-#RESResearchConsoleTopBar h1 {
+#RedditResearchConsoleTopBar h1 {
 	float: left;
 	margin-top: 6px;
 	padding: 0;
 	font-size: 14px;
 }
-#RESResearchConsoleSubredditLink {
+#RedditResearchConsoleSubredditLink {
 	float: right;
 	margin-right: 34px;
 	margin-top: 7px;
 	font-size: 11px;
 }
-#RESResearchKnownBugs, #RESResearchKnownFeatureRequests {
+#RedditResearchKnownBugs, #RedditResearchKnownFeatureRequests {
 	list-style-type: disc;
 }
-.RESResearchCloseButton {
+.RedditResearchCloseButton {
 	position: absolute;
 	top: 7px;
 	right: 7px;
@@ -245,38 +245,38 @@ body.res-console-open {
 	z-index: 1000;
 	cursor: pointer;
 }
-#RESResearchConsoleTopBar .RESResearchCloseButton {
+#RedditResearchConsoleTopBar .RedditResearchCloseButton {
 	top: 9px;
 	right: 9px;
 }
-.RESResearchCloseButton:hover {
+.RedditResearchCloseButton:hover {
 	border: 1px solid #999;
 	background-color: #ddd;
 }
-#RESResearchClose {
+#RedditResearchClose {
 	float: right;
 	margin-top: 2px;
 	margin-right: 0;
 }
-#RESResearchAdvOptions {
+#RedditResearchAdvOptions {
 	margin: 0;
 }
-#RESResearchAdvOptionsSpan {
+#RedditResearchAdvOptionsSpan {
 	float: right;
 	margin-right: 15px;
 	margin-top: 5px;
 	color: #868686;
 }
-#RESResearchAdvOptionsSpan label {
+#RedditResearchAdvOptionsSpan label {
 	margin-left: 5px;
 }
-#RESResearchConsoleContent.advanced-options-disabled .optionContainer.advanced {
+#RedditResearchConsoleContent.advanced-options-disabled .optionContainer.advanced {
 	display: none;
 }
 .optionContainer.advanced>label{
 	font-style: italic;
 }
-.RESResearchDialogSmall {
+.RedditResearchDialogSmall {
 	background-color: #fff;
 	border: 1px solid #c7c7c7;
 	border-radius: 3px;
@@ -284,7 +284,7 @@ body.res-console-open {
 	color: #666;
 	position: relative;
 }
-.RESResearchDialogSmall > h3 {
+.RedditResearchDialogSmall > h3 {
 	color: #000;
 	font-size: 14px;
 	margin: 0 0 10px;
@@ -298,17 +298,17 @@ body.res-console-open {
 	padding-left: 10px;
 	padding-top: 12px;
 }
-.RESResearchDialogSmall .RESResearchDialogContents {
+.RedditResearchDialogSmall .RedditResearchDialogContents {
 	padding: 0 12px 12px 12px;
 }
-#BigEditor .BELeft .RESResearchDialogContents {
+#BigEditor .BELeft .RedditResearchDialogContents {
 	padding-top: 52px;
 }
-.usertext-edit .RESResearchDialogSmall .md.RESResearchDialogContents {
+.usertext-edit .RedditResearchDialogSmall .md.RedditResearchDialogContents {
 	border: none;
 	background-color: white !important;
 }
-#RESResearchHelp {
+#RedditResearchHelp {
 	background-image: url("https://s3.amazonaws.com/e.thumbs.redditmedia.com/r22WT2K4sio9Bvev.png");
 	background-position: -16px -120px;
 	margin-right: 8px;
@@ -317,14 +317,14 @@ body.res-console-open {
 	float: right;
 	cursor: pointer;
 }
-#RESResearchMenu {
+#RedditResearchMenu {
 	position: absolute;
 	top: 60px;
 	left: 15px;
 	right: 0;
 	height: 30px;
 }
-#RESResearchMenu li {
+#RedditResearchMenu li {
 	float: left;
 	text-align: center;
 	/* min-width: 80px; */
@@ -337,15 +337,15 @@ body.res-console-open {
 	background-color: #ddd;
 	color: #6c6c6c;
 }
-#RESResearchMenu li.active {
+#RedditResearchMenu li.active {
 	border-color: #000;
 	background-color: #7f7f7f;
 	color: #fff;
 }
-#RESResearchMenu li:hover {
+#RedditResearchMenu li:hover {
 	border-color: #000;
 }
-#RESResearchConsoleContent {
+#RedditResearchConsoleContent {
 	clear: both;
 	padding: 6px 6px 20px 6px;
 	position: absolute;
@@ -355,10 +355,10 @@ body.res-console-open {
 	bottom: 0;
 	border-top: 1px solid #DDD;
 }
-#RESResearchConsoleConfigPanel {
+#RedditResearchConsoleConfigPanel {
 	height: 100%;
 }
-#RESResearchConfigPanelOptions, #RESResearchAboutDetails {
+#RedditResearchConfigPanelOptions, #RedditResearchAboutDetails {
 	margin-top: 15px;
 	display: block;
 	margin-left: 220px;
@@ -383,7 +383,7 @@ body.res-console-open {
 #moduleOptionsScrim.visible {
 	display: block;
 }
-#RESResearchConfigPanelModulesPane, #RESResearchAboutPane {
+#RedditResearchConfigPanelModulesPane, #RedditResearchAboutPane {
 	float: left;
 	width: 195px;
 	padding-right: 15px;
@@ -411,7 +411,7 @@ body.res-console-open {
 	opacity: 1;
 	font-weight: bold;
 }
-.RESResearchPanel {
+.RedditResearchPanel {
 	display: none;
 }
 .clear {
@@ -454,16 +454,16 @@ p.moduleListing {
 	-moz-box-shadow: 3px 3px 3px #BBB;
 	-webkit-box-shadow: 3px 3px 3px #BBB;
 }
-#RESResearchConsoleModulesPanel label {
+#RedditResearchConsoleModulesPanel label {
 	float: left;
 	width: 15%;
 	padding-top: 6px;
 }
-#RESResearchConsoleModulesPanel input[type=checkbox] {
+#RedditResearchConsoleModulesPanel input[type=checkbox] {
 	float: left;
 	margin-left: 10px;
 }
-#RESResearchConsoleModulesPanel input[type=button] {
+#RedditResearchConsoleModulesPanel input[type=button] {
 	float: right;
 	padding: 3px;
 	margin-left: 20px;
@@ -474,7 +474,7 @@ p.moduleListing {
 	background-color: #F0F3FC;
 	margin-bottom: 10px;
 }
-#RESResearchConsoleModulesPanel p {
+#RedditResearchConsoleModulesPanel p {
 	overflow: auto;
 	clear: both;
 	margin-bottom: 10px;
@@ -485,7 +485,7 @@ p.moduleListing {
 	margin-left: 10px;
 	padding-top: 6px;
 }
-#RESResearchConfigPanelOptions .moduleDescription {
+#RedditResearchConfigPanelOptions .moduleDescription {
 	margin-left: 0;
 	margin-top: 10px;
 	padding-top: 0;
@@ -516,7 +516,7 @@ p.moduleListing {
 	float: left;
 	margin-right: 15px;
 }
-#RESResearchConsoleContainer .toggleButton {
+#RedditResearchConsoleContainer .toggleButton {
 	margin-left: 10px;
 }
 .toggleButton input[type=checkbox] {
@@ -603,7 +603,7 @@ p.moduleListing {
 .optionContainer .optionsTable input[type=text], .optionContainer .optionsTable input[type=password] {
 	margin-left: 0;
 }
-.optionContainer .RESResearchConsoleButton {
+.optionContainer .RedditResearchConsoleButton {
 	float: left;
 	position: relative;
 	top: -6px;
@@ -634,13 +634,13 @@ p.moduleListing {
 	margin-top: 12px;
 	margin-bottom: 12px;
 }
-#RESResearchConsoleVersionDisplay {
+#RedditResearchConsoleVersionDisplay {
 	float: left;
 	font-size: 10px;
 	margin-left: 6px;
 	margin-top: 7px;
 }
-#RESResearchModuleOptionsSave {
+#RedditResearchModuleOptionsSave {
 	display: none;
 	position: absolute;
 	z-index: 1100;
@@ -655,7 +655,7 @@ p.moduleListing {
 	background-color: #5cc410;
 	margin-bottom: 10px;
 }
-.RESResearchConsoleButton {
+.RedditResearchConsoleButton {
 	cursor: pointer;
 	padding: 3px 5px;
 	font-size: 12px;
@@ -664,7 +664,7 @@ p.moduleListing {
 	border-radius: 3px;
 	background-color: #5cc410;
 }
-#RESResearchModuleOptionsSave:hover {
+#RedditResearchModuleOptionsSave:hover {
 	background-color: #73e81e;
 }
 .addRowButton {
@@ -678,7 +678,7 @@ p.moduleListing {
 .addRowButton:hover {
 	background-color: #289dee;
 }
-#RESResearchModuleOptionsSaveBottom {
+#RedditResearchModuleOptionsSaveBottom {
 	float: right;
 	margin-top: 10px;
 	margin-right: 30px;
@@ -691,7 +691,7 @@ p.moduleListing {
 	background-color: #F0F3FC;
 	margin-bottom: 10px;
 }
-#RESResearchModuleOptionsSaveStatus {
+#RedditResearchModuleOptionsSaveStatus {
 	display: none;
 	position: absolute;
 	top: -35px;
@@ -701,7 +701,7 @@ p.moduleListing {
 	text-align: center;
 	background-color: #FFFACD;
 }
-#RESResearchModuleOptionsSaveStatusBottom {
+#RedditResearchModuleOptionsSaveStatusBottom {
 	display: none;
 	float: right;
 	margin-top: 10px;
@@ -710,44 +710,44 @@ p.moduleListing {
 	text-align: center;
 	background-color: #FFFACD;
 }
-#RESResearchConsoleContent p {
+#RedditResearchConsoleContent p {
 	margin-bottom: 10px;
 }
-#RESResearchConsoleContent ul {
+#RedditResearchConsoleContent ul {
 	margin-bottom: 10px;
 	margin-top: 10px;
 }
-#RESResearchConsoleContent li {
+#RedditResearchConsoleContent li {
 	list-style-type: disc;
 	margin-left: 15px;
 }
-#AboutRESResearchTeamImage {
+#AboutRedditResearchTeamImage {
 	width: 100%;
 	background-color: #000;
 	margin-bottom: 12px;
 }
-#AboutRESResearchTeamImage img {
+#AboutRedditResearchTeamImage img {
 	display: block;
 	margin: auto;
 }
-#SearchRESResearch-results-container {
+#SearchRedditResearch-results-container {
 	display: none;
 }
-#SearchRESResearch-results-hidden {
+#SearchRedditResearch-results-hidden {
 	display: none;
 	font-style: italic;
 }
-#SearchRESResearch-results-hidden  {
+#SearchRedditResearch-results-hidden  {
 	display: none;
 }
-.advanced-options-disabled #SearchRESResearch-results-hidden.advancedResults {
+.advanced-options-disabled #SearchRedditResearch-results-hidden.advancedResults {
 	display: inline;
 }
-#RESResearchConsoleContent.advanced-options-disabled .SearchRESResearch-result-item.advanced {
+#RedditResearchConsoleContent.advanced-options-disabled .SearchRedditResearch-result-item.advanced {
 	display: none;
 }
-#SearchRESResearch-results-container + #SearchRESResearch-boilerplate { margin-top: 1em; border-top: 1px black solid; padding-top: 1em; }
-#SearchRESResearch-results-container li {
+#SearchRedditResearch-results-container + #SearchRedditResearch-boilerplate { margin-top: 1em; border-top: 1px black solid; padding-top: 1em; }
+#SearchRedditResearch-results-container li {
 	list-style-type: none;
 	border-bottom: 1px dashed #ccc;
 	cursor: pointer;
@@ -756,22 +756,22 @@ p.moduleListing {
 	padding-top: 24px;
 	padding-bottom: 24px;
 }
-#SearchRESResearch-results-container li:hover {
+#SearchRedditResearch-results-container li:hover {
 	background-color: #FAFAFF;
 }
-.SearchRESResearch-result-title {
+.SearchRedditResearch-result-title {
 	margin-bottom: 12px;
 	font-weight: bold;
 	color: #666;
 }
-.advanced .SearchRESResearch-result-title {
+.advanced .SearchRedditResearch-result-title {
 	font-style: italic;
 }
-.SearchRESResearch-breadcrumb {
+.SearchRedditResearch-breadcrumb {
 	font-weight: normal;
 	color: #888;
 }
-.SearchRESResearch-result-copybutton {
+.SearchRedditResearch-result-copybutton {
 	float: right;
 	opacity: 0.4;
 	padding: 10px;
@@ -781,21 +781,21 @@ p.moduleListing {
 	background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAEZ0lEQVRogdVZXWhcRRg93+zdTWzqmmrNQyIxuZlN/MMftlAfgq5BMQjim9BCEasg+BKsSF9aXwqGUgy+Kv492IcKPhlI25eGShEULAjRxJ0kEJYSqibdZKl22TufD6Z2u9m9M/fOXqPnbWfOnO87c2fufHMX+J+D4g7M5/Pe5uZmDzP3aK1FYz8zV9Lp9JWFhYWKW4rh8OIOLJfLRwCcBACi7fNARAiCYAXA/bGzs8C2mYuAeyw4ex30rRDbgNb6HIDfQihVANNx9W0Rew8AgJQyA+BGi+63lFIfuOjbwGUJQSlVBVBr1kdEf7po28LJQG9v7y60fhHsdtG2hZOBrq6uI636mPm1/v7+bhd9G8Q2IKU8zMwnQigPZDKZC3H1beHyBB624DzioG8FpyVkgaYbvJ2IfRJb4tY5MbM2CmAUoDtA+Arje35sR4BEnwAzf44vOSPOrp0h0DcEmiTgXWJcxsz6MQAYGRnZXSgUYk9kkgauep53Utx57TgzvdwYl4ATmLk2FgSBKJVK3/u+vy9OkCQNTC/Mz1cYeLMVgaCPKqU2iOiKEOKSlPJw1CCJGWDmnzELD0Drs4BEPwBorX8CkAHwiZTyYJQ4iRkgIg/PUA2MpZYk5l8AQAjRWdf6mZTySds4SS6h/QDARJMt+jUz3gcAZi7UtWeI6EPbje1i4GsAYQXbWKFQ8DB+16fE9B4AXde3wUwH8MKei0NDQ2NoOPCY+dFSqfS6TRJO5XQul3uKmS+g+URMK6Ve/OfXud/vgxb7QFzFjeAiXrq3Mjg42JNKpS4D6G0yfl4p9aApBycDACCl/ANAZ5Ou0PuA7/tZIcS3AB5qmRzR/mKx+F1Y/CT3QOh9YGlpqQJDJcDM46YgSb5GTXWQBnDawBkxxUm6mAsFEZ01UO42aTgbYOaVZu1E1LS9gbNhoOwyaTgb0Fo/B9x2WFWJ6FWl1HmLsaYEqyYN53J6eXl5RUr5hBBiLwAEQVBRSl21GUtEo8wcRjE9ofbcB5RSGzbB6jEwMNDJzBMG2rxJZ8c2sed5kwD8MA4RXTLqRAmay+WOMfNjUcbUQwgxobXuxt+vz8cN9NW+vr7zxWIxlBTJgNb6aSJ6NsqYejDzcQA9MCcPAB/Nzs4a79T/+hJq9im+Ecy82tHRccpGL9ITIKIzAH6IMqYeWus1IcSwBXVibm7O6n8F52IuCvL5vFcul08DaLwj12NKKfW2rWaiBrYS/rWuqRPNK9eb+Fgp9QZuvzuEIunvQkDYnfgWasx8dHFxcSqq+I4WczfBzFNxkgf+IwaEELE/QUZaQr7vZ2u12jbTqVQqm06nt2mtr697QpjniJm7h4eH/Wq1et3zvOtbpYkVrDbx1gn8DoCsrbALmHmViE4ppYzLymggl8sdZGbTzSkpHFJKfRFGsDkVX2lfPpFxyESw2cQ2J2dSMP7PbGMg04ZE4sK452wMrLUhkbgIO7UBWLxGhRDPhwkxc9amwowDrXXif1HtOP4CxeRtUNqGs18AAAAASUVORK5CYII=");
 	display: none;
 }
-#SearchRESResearch-results li:hover .SearchRESResearch-result-copybutton { display: block; }
-#SearchRESResearch-input-submit {
+#SearchRedditResearch-results li:hover .SearchRedditResearch-result-copybutton { display: block; }
+#SearchRedditResearch-input-submit {
 	margin-left: 8px;
 }
-#SearchRESResearch-input {
+#SearchRedditResearch-input {
 	width: 200px;
 	height: 22px;
 	font-size: 14px;
 }
-#SearchRESResearch-input-container {
+#SearchRedditResearch-input-container {
 	float: left;
 	margin-left: 3em;
 	margin-top: 7px;
 }
-#RESResearchSearchMenuItem {
+#RedditResearchSearchMenuItem {
 	display: block;
 	float: right;
 	margin: 7px;
@@ -805,11 +805,11 @@ p.moduleListing {
 	background: transparent center center no-repeat;
 	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAEJGlDQ1BJQ0MgUHJvZmlsZQAAOBGFVd9v21QUPolvUqQWPyBYR4eKxa9VU1u5GxqtxgZJk6XtShal6dgqJOQ6N4mpGwfb6baqT3uBNwb8AUDZAw9IPCENBmJ72fbAtElThyqqSUh76MQPISbtBVXhu3ZiJ1PEXPX6yznfOec7517bRD1fabWaGVWIlquunc8klZOnFpSeTYrSs9RLA9Sr6U4tkcvNEi7BFffO6+EdigjL7ZHu/k72I796i9zRiSJPwG4VHX0Z+AxRzNRrtksUvwf7+Gm3BtzzHPDTNgQCqwKXfZwSeNHHJz1OIT8JjtAq6xWtCLwGPLzYZi+3YV8DGMiT4VVuG7oiZpGzrZJhcs/hL49xtzH/Dy6bdfTsXYNY+5yluWO4D4neK/ZUvok/17X0HPBLsF+vuUlhfwX4j/rSfAJ4H1H0qZJ9dN7nR19frRTeBt4Fe9FwpwtN+2p1MXscGLHR9SXrmMgjONd1ZxKzpBeA71b4tNhj6JGoyFNp4GHgwUp9qplfmnFW5oTdy7NamcwCI49kv6fN5IAHgD+0rbyoBc3SOjczohbyS1drbq6pQdqumllRC/0ymTtej8gpbbuVwpQfyw66dqEZyxZKxtHpJn+tZnpnEdrYBbueF9qQn93S7HQGGHnYP7w6L+YGHNtd1FJitqPAR+hERCNOFi1i1alKO6RQnjKUxL1GNjwlMsiEhcPLYTEiT9ISbN15OY/jx4SMshe9LaJRpTvHr3C/ybFYP1PZAfwfYrPsMBtnE6SwN9ib7AhLwTrBDgUKcm06FSrTfSj187xPdVQWOk5Q8vxAfSiIUc7Z7xr6zY/+hpqwSyv0I0/QMTRb7RMgBxNodTfSPqdraz/sDjzKBrv4zu2+a2t0/HHzjd2Lbcc2sG7GtsL42K+xLfxtUgI7YHqKlqHK8HbCCXgjHT1cAdMlDetv4FnQ2lLasaOl6vmB0CMmwT/IPszSueHQqv6i/qluqF+oF9TfO2qEGTumJH0qfSv9KH0nfS/9TIp0Wboi/SRdlb6RLgU5u++9nyXYe69fYRPdil1o1WufNSdTTsp75BfllPy8/LI8G7AUuV8ek6fkvfDsCfbNDP0dvRh0CrNqTbV7LfEEGDQPJQadBtfGVMWEq3QWWdufk6ZSNsjG2PQjp3ZcnOWWing6noonSInvi0/Ex+IzAreevPhe+CawpgP1/pMTMDo64G0sTCXIM+KdOnFWRfQKdJvQzV1+Bt8OokmrdtY2yhVX2a+qrykJfMq4Ml3VR4cVzTQVz+UoNne4vcKLoyS+gyKO6EHe+75Fdt0Mbe5bRIf/wjvrVmhbqBN97RD1vxrahvBOfOYzoosH9bq94uejSOQGkVM6sN/7HelL4t10t9F4gPdVzydEOx83Gv+uNxo7XyL/FtFl8z9ZAHF4bBsrEwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAONJREFUOBGlkz0KwkAQRo2ICt5IsBE9gI1dwAOk8AqCgufQPo2CYGlhIVh4Aj2ClYVg4hvdCclmI8gOPHbn78vsLgnSNK35WN2nWXq9BRoVEwyIj6ANO4ghgbLJHVjM8BM4wwGesIYm2LU1O9ClSCwCzfXZi8gkF9NcSWBB0dVRGBPbOOLOSww4qJA38d3vbanqEabEA5Mbsj4gNH42vvgFxxTIJYpd4AgvcbAVdKDQ8/lKflaz12ds4e+hBxFsIYQ7fM1W/OHPyYktIZuiagLVt9cxgRucNPGvgPZlq/e/4C3wBoAXSrzY2Qd2AAAAAElFTkSuQmCC');
 }
-li:hover > #RESResearchSearchMenuItem {
+li:hover > #RedditResearchSearchMenuItem {
 	border-color: #369;
 	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAEJGlDQ1BJQ0MgUHJvZmlsZQAAOBGFVd9v21QUPolvUqQWPyBYR4eKxa9VU1u5GxqtxgZJk6XtShal6dgqJOQ6N4mpGwfb6baqT3uBNwb8AUDZAw9IPCENBmJ72fbAtElThyqqSUh76MQPISbtBVXhu3ZiJ1PEXPX6yznfOec7517bRD1fabWaGVWIlquunc8klZOnFpSeTYrSs9RLA9Sr6U4tkcvNEi7BFffO6+EdigjL7ZHu/k72I796i9zRiSJPwG4VHX0Z+AxRzNRrtksUvwf7+Gm3BtzzHPDTNgQCqwKXfZwSeNHHJz1OIT8JjtAq6xWtCLwGPLzYZi+3YV8DGMiT4VVuG7oiZpGzrZJhcs/hL49xtzH/Dy6bdfTsXYNY+5yluWO4D4neK/ZUvok/17X0HPBLsF+vuUlhfwX4j/rSfAJ4H1H0qZJ9dN7nR19frRTeBt4Fe9FwpwtN+2p1MXscGLHR9SXrmMgjONd1ZxKzpBeA71b4tNhj6JGoyFNp4GHgwUp9qplfmnFW5oTdy7NamcwCI49kv6fN5IAHgD+0rbyoBc3SOjczohbyS1drbq6pQdqumllRC/0ymTtej8gpbbuVwpQfyw66dqEZyxZKxtHpJn+tZnpnEdrYBbueF9qQn93S7HQGGHnYP7w6L+YGHNtd1FJitqPAR+hERCNOFi1i1alKO6RQnjKUxL1GNjwlMsiEhcPLYTEiT9ISbN15OY/jx4SMshe9LaJRpTvHr3C/ybFYP1PZAfwfYrPsMBtnE6SwN9ib7AhLwTrBDgUKcm06FSrTfSj187xPdVQWOk5Q8vxAfSiIUc7Z7xr6zY/+hpqwSyv0I0/QMTRb7RMgBxNodTfSPqdraz/sDjzKBrv4zu2+a2t0/HHzjd2Lbcc2sG7GtsL42K+xLfxtUgI7YHqKlqHK8HbCCXgjHT1cAdMlDetv4FnQ2lLasaOl6vmB0CMmwT/IPszSueHQqv6i/qluqF+oF9TfO2qEGTumJH0qfSv9KH0nfS/9TIp0Wboi/SRdlb6RLgU5u++9nyXYe69fYRPdil1o1WufNSdTTsp75BfllPy8/LI8G7AUuV8ek6fkvfDsCfbNDP0dvRh0CrNqTbV7LfEEGDQPJQadBtfGVMWEq3QWWdufk6ZSNsjG2PQjp3ZcnOWWing6noonSInvi0/Ex+IzAreevPhe+CawpgP1/pMTMDo64G0sTCXIM+KdOnFWRfQKdJvQzV1+Bt8OokmrdtY2yhVX2a+qrykJfMq4Ml3VR4cVzTQVz+UoNne4vcKLoyS+gyKO6EHe+75Fdt0Mbe5bRIf/wjvrVmhbqBN97RD1vxrahvBOfOYzoosH9bq94uejSOQGkVM6sN/7HelL4t10t9F4gPdVzydEOx83Gv+uNxo7XyL/FtFl8z9ZAHF4bBsrEwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAPBJREFUOBGlkTEKAjEQRTciIth4HkvRA9jYCR7AwisICvZiZ6X9NlvYW1gIFp5AT2Eh6PpGMjLuBkUy8JmZ5P+fZOLyPE9iohIjFm20QTV0A+dch/UeqIMtSHnqg1wOmYEFjAkQ8hHswA1sQM3ytC6KWxBlqqM3IUna9GIy1DWbiwYziGdLkJpIQVZclz40REbgnKhMSB/+b+sKSZ8wpnb+9C71FQwsV+uPJ3iBDFFOO4E9uPt+TW6oUHPJwJvINy7BCvTBAohpBpoqfnFt861GOPUmc8vTd7L3O5it3OaCwUHZfxmoyObQN9r9n3W0wRPmWv0jZnGemgAAAABJRU5ErkJggg==');
 }
-#RESResearchSearchMenuItem:hover {
+#RedditResearchSearchMenuItem:hover {
 	background-color: #C8DBEC;
 }
 .outdated {
@@ -818,7 +818,7 @@ li:hover > #RESResearchSearchMenuItem {
 	margin-right: 15px;
 	margin-top: 5px;
 }
-#RESResearchNotifications {
+#RedditResearchNotifications {
 	position: fixed;
 	top: 0;
 	right: 10px;
@@ -827,7 +827,7 @@ li:hover > #RESResearchSearchMenuItem {
 	background: none;
 	z-index: 100000150 !important;
 }
-.RESResearchNotification {
+.RedditResearchNotification {
 	opacity: 0;
 	position: relative;
 	font: 12px/14px Arial, Helvetica, Verdana, sans-serif;
@@ -840,36 +840,36 @@ li:hover > #RESResearchSearchMenuItem {
 	background-color: #fff;
 	z-index: 100;
 }
-.RESResearchNotification a {
+.RedditResearchNotification a {
 	color: orangered;
 }
-.RESResearchNotification a:hover {
+.RedditResearchNotification a:hover {
 	text-decoration: underline;
 }
-.RESResearchNotification.timerOn {
+.RedditResearchNotification.timerOn {
 	border: 1px solid #c7c7c7;
 }
-.RESResearchNotificationContent {
+.RedditResearchNotificationContent {
 	overflow: auto;
 	padding: 10px;
 	padding-bottom: 0;
 	color: #999;
 }
-.RESResearchNotificationFooter {
+.RedditResearchNotificationFooter {
 	padding: 10px;
 }
-.RESResearchNotificationContent h2 {
+.RedditResearchNotificationContent h2 {
 	color: #000;
 	margin-bottom: 10px;
 }
-.RESResearchNotificationContent p {
+.RedditResearchNotificationContent p {
 	margin-top: 0.5em;
 	margin-bottom: 0.5em;
 }
-.RESResearchNotificationContent strong {
+.RedditResearchNotificationContent strong {
 	font-weight: bolder;
 }
-.RESResearchNotificationHeader {
+.RedditResearchNotificationHeader {
 	padding-left: 10px;
 	padding-right: 50px;
 	background-color: #f0f3fc;
@@ -877,24 +877,24 @@ li:hover > #RESResearchSearchMenuItem {
 	height: 38px;
 }
 
-.RESResearchNotification .RESResearchNotificationToggle {
+.RedditResearchNotification .RedditResearchNotificationToggle {
 	margin-top: 0.5em;
 	font-size: smaller;
 	font-weight: normal;
 }
-.RESResearchNotificationHeader .RESResearchGearIcon { float: right; }
-.RESResearchNotificationHeader h3 {
+.RedditResearchNotificationHeader .RedditResearchGearIcon { float: right; }
+.RedditResearchNotificationHeader h3 {
 	padding-top: 12px;
 	font-size: 15px;
 }
-.RESResearchNotificationClose {
+.RedditResearchNotificationClose {
 	position: absolute;
 	right: 0;
 	top: 0;
 	margin-right: 12px;
 	margin-top: 6px;
 }
-a.RESResearchNotificationButtonBlue {
+a.RedditResearchNotificationButtonBlue {
 	clear: both;
 	float: right;
 	cursor: pointer;
@@ -906,16 +906,16 @@ a.RESResearchNotificationButtonBlue {
 	border-radius: 3px;
 	background-color: #107ac4;
 }
-.RESResearch-spoiler {
+.RedditResearch-spoiler {
 	font-style: italic;
 	text-decoration: dotted underline;
 	cursor: help;
 }
-.RESResearch-spoiler-contents { display: none; }
-.RESResearch-spoiler:hover + .RESResearch-spoiler-contents,
-.RESResearch-spoiler:active + .RESResearch-spoiler-contents
-.RESResearch-spoiler-contents:active,
-.RESResearch-spoiler-contents:hover { display: inline-block; }
+.RedditResearch-spoiler-contents { display: none; }
+.RedditResearch-spoiler:hover + .RedditResearch-spoiler-contents,
+.RedditResearch-spoiler:active + .RedditResearch-spoiler-contents
+.RedditResearch-spoiler-contents:active,
+.RedditResearch-spoiler-contents:hover { display: inline-block; }
 
 #baconBit {
 	position: fixed;
@@ -960,7 +960,7 @@ a.RESResearchNotificationButtonBlue {
 	border-radius: 3px;
 	background-color: #ff5757;
 }
-.RESResearchButton {
+.RedditResearchButton {
 	margin: 5px;
 	padding: 3px;
 	border: 1px solid #999;
@@ -968,11 +968,11 @@ a.RESResearchNotificationButtonBlue {
 	cursor: pointer;
 	border-radius: 5px;
 }
-.RESResearchButton:hover {
+.RedditResearchButton:hover {
 	background-color: #DDD;
 }
 /* Stuff added to force specificty */
-span.RESResearchCharCounter {
+span.RedditResearchCharCounter {
 	color: gray;
 	float: right;
 	font-size: 15px;
@@ -980,12 +980,12 @@ span.RESResearchCharCounter {
 	margin-bottom: -2px;
 }
 
-span.RESResearchCharCounter.tooLong {
+span.RedditResearchCharCounter.tooLong {
 	color: red;
 }
 
 /* Big Editor */
-body.RESResearchScrollLock {
+body.RedditResearchScrollLock {
 	height: 100%;
 	overflow: hidden;
 }
@@ -1001,7 +1001,7 @@ body.RESResearchScrollLock {
 #BigEditor .markdownEditor-wrapper {
 	display: none; /* unused */
 }
-#BigEditor .RESResearchDialogContents .markdownEditor-wrapper {
+#BigEditor .RedditResearchDialogContents .markdownEditor-wrapper {
 	display: block;
 }
 .BELeft, .BERight {
@@ -1013,7 +1013,7 @@ body.RESResearchScrollLock {
 	box-sizing: border-box;
 	overflow: hidden;
 }
-#BigEditor .RESResearchDialogContents {
+#BigEditor .RedditResearchDialogContents {
 	position: absolute !important;
 	top: 0;
 	bottom: 0;
@@ -1032,12 +1032,12 @@ body.RESResearchScrollLock {
 #BigEditor > div {
 	margin: 1em .5em;
 }
-.BELeft .RESResearchDialogContents {
+.BELeft .RedditResearchDialogContents {
 	left: 0;
 	right: 0;
 	margin: 0 1em 0 1em;
 }
-.BERight .RESResearchDialogContents, .BERight .RESResearchDialogContents.wiki-page-content {
+.BERight .RedditResearchDialogContents, .BERight .RedditResearchDialogContents.wiki-page-content {
 	overflow: auto;
 	padding: 12px;
 	margin: 4em 1em 1em 0em;
@@ -1062,7 +1062,7 @@ body.RESResearchScrollLock {
 .BESideHide {
 	display: none;
 }
-.RESResearchFadeButton {
+.RedditResearchFadeButton {
 	pointer-events: auto;
 	right: 38px;
 	font-family: Webdings;
@@ -1073,7 +1073,7 @@ body.RESResearchScrollLock {
 	box-sizing: border-box;
 }
 
-.content .RESResearchBigEditorPop {
+.content .RedditResearchBigEditorPop {
 	float: right;
 	margin: 3px 0 0 12px;
 	color: #333;
@@ -1086,10 +1086,10 @@ body.RESResearchScrollLock {
 	background-position: 4px 50%;
 	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA/ppVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ1dWlkOjY1RTYzOTA2ODZDRjExREJBNkUyRDg4N0NFQUNCNDA3IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjRGQkU3MTYwRkVBMjExRTFCNkYwODQ2MzkzQkU0QzU4IiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjRGQkU3MTVGRkVBMjExRTFCNkYwODQ2MzkzQkU0QzU4IiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIElsbHVzdHJhdG9yIENTNiAoTWFjaW50b3NoKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjAxODAxMTc0MDcyMDY4MTE4MDgzRUZFRDQ2NDFEODMyIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjAyODAxMTc0MDcyMDY4MTE4MDgzRTdGNDQzQTE0MUI2Ii8+IDxkYzp0aXRsZT4gPHJkZjpBbHQ+IDxyZGY6bGkgeG1sOmxhbmc9IngtZGVmYXVsdCI+Z2x5cGhpY29uc19oYWxmbGluZ3M8L3JkZjpsaT4gPC9yZGY6QWx0PiA8L2RjOnRpdGxlPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsexWb8AAACvSURBVHjalFGBDcIgEHxYwAG0naFuwCbtBjIKbgCbsIHO0LhAJ8B788SHGpNecsA9z8M9ZhjOhb5I6/palKZxvERMc9WWWgTao4n1BzIqTqo6r3N/IIFXcANPoH7SIrFNchKVUj6ElwkMVat44L2qDQ9HYOkgrDYI7rrEMd0Ig/dFaV0Wg3f8ha/JmG5i2oHeyqc8VDeiuiCq7nHO3HtwqP6sQtbun2n/w2cTewswAPjfRfYSqgHwAAAAAElFTkSuQmCC);
 }
-button.RESResearchBigEditorPop:hover {
+button.RedditResearchBigEditorPop:hover {
 	background-color: #ddd;
 }
-.wiki-page .RESResearchBigEditorPop {
+.wiki-page .RedditResearchBigEditorPop {
 	margin: 6px 20px 0 0;
 }
 #autocomplete_dropdown {
@@ -1149,24 +1149,24 @@ img {
 
 .madeVisible { clear: left; display: block; overflow: hidden; }
 .madeVisible a { display: inline-block; overflow: hidden; }
-.RESResearchImage { display: block !important;  }
-.RESResearchImage.loaded { position: absolute;  }
-.RESResearchImagePlaceholder { float: left; display: block !important; }
-.RESResearchdupeimg { color: #000; font-size: 10px;  }
-.RESResearchClear { clear: both; margin-bottom: 10px;  }
+.RedditResearchImage { display: block !important;  }
+.RedditResearchImage.loaded { position: absolute;  }
+.RedditResearchImagePlaceholder { float: left; display: block !important; }
+.RedditResearchdupeimg { color: #000; font-size: 10px;  }
+.RedditResearchClear { clear: both; margin-bottom: 10px;  }
 
-.RESResearchGalleryControls a { cursor: pointer; display: inline-block; background-image: url("https://s3.amazonaws.com/e.thumbs.redditmedia.com/r22WT2K4sio9Bvev.png"); width: 16px; height: 16px; margin: 5px; }
-.RESResearchGalleryControls span { position: relative; top: -9px; }
-.RESResearchGalleryControls .previous { background-position: 0 -352px; }
-.RESResearchGalleryControls .next { background-position: 16px -352px; }
-.RESResearchGalleryControls .next,.RESResearchGalleryControls .previous {
+.RedditResearchGalleryControls a { cursor: pointer; display: inline-block; background-image: url("https://s3.amazonaws.com/e.thumbs.redditmedia.com/r22WT2K4sio9Bvev.png"); width: 16px; height: 16px; margin: 5px; }
+.RedditResearchGalleryControls span { position: relative; top: -9px; }
+.RedditResearchGalleryControls .previous { background-position: 0 -352px; }
+.RedditResearchGalleryControls .next { background-position: 16px -352px; }
+.RedditResearchGalleryControls .next,.RedditResearchGalleryControls .previous {
 	-webkit-user-select: none;
 	-moz-user-select: none;
 }
-.RESResearchGalleryControls .end { background-position-y: -336px; }
-.RESResearchGalleryControls .previous:hover { background-position: 0 -320px; }
-.RESResearchGalleryControls .next:hover { background-position: 16px -320px; }
-.RESResearchGalleryControls .end:hover { background-position-y: -304px; }
+.RedditResearchGalleryControls .end { background-position-y: -336px; }
+.RedditResearchGalleryControls .previous:hover { background-position: 0 -320px; }
+.RedditResearchGalleryControls .next:hover { background-position: 16px -320px; }
+.RedditResearchGalleryControls .end:hover { background-position-y: -304px; }
 
 .imgTitle {
 	font-size: 13px;
@@ -1177,8 +1177,8 @@ img {
 	padding: 2px;
 }
 .thing .title.visited { color: #551A8B; }
-.RESResearchImage.RESResearchImageError {content: "";}
-.RESResearchImage.RESResearchImageError:after {
+.RedditResearchImage.RedditResearchImageError {content: "";}
+.RedditResearchImage.RedditResearchImageError:after {
 	content:"Loading of image " attr(src) " failed. Click to view directly";
 }
 .usertext iframe {
@@ -1186,9 +1186,9 @@ img {
 }
 
 /* modules['showParent'] - show parent hover */
-.RESResearchHoverHighlight { background-color: lightblue; }
-.res-parents-down .RESResearchHoverHighlight { cursor: se-resize; }
-.res-parents-up .RESResearchHoverHighlight { cursor: ne-resize; }
+.RedditResearchHoverHighlight { background-color: lightblue; }
+.res-parents-down .RedditResearchHoverHighlight { cursor: se-resize; }
+.res-parents-up .RedditResearchHoverHighlight { cursor: ne-resize; }
 #parentCommentContainer {
 	border: 1px solid #666;
 	background-color:#fff;
@@ -1224,7 +1224,7 @@ a.bylink.parentlink {
 	content: attr(data-text);
 }
 
-.RESResearchThrobber, .RESResearchThrobber:before, .RESResearchThrobber:after {
+.RedditResearchThrobber, .RedditResearchThrobber:before, .RedditResearchThrobber:after {
 	font-size: 0;
     position: relative;
     display: inline-block;
@@ -1233,36 +1233,36 @@ a.bylink.parentlink {
     width: 30px;
     border-radius: 50%;
     box-shadow: inset 0 0 5px 1px #222;
-    -moz-animation: RESResearchThrobber 1400ms 400ms infinite linear;
-    -webkit-animation: RESResearchThrobber 1400ms 400ms infinite linear;
-    animation: RESResearchThrobber 1400ms 400ms infinite linear;
+    -moz-animation: RedditResearchThrobber 1400ms 400ms infinite linear;
+    -webkit-animation: RedditResearchThrobber 1400ms 400ms infinite linear;
+    animation: RedditResearchThrobber 1400ms 400ms infinite linear;
 }
-.RESResearchThrobber {
+.RedditResearchThrobber {
 	margin: 0 35px -7.5px;
 }
 
-.RESResearchThrobber:before {
+.RedditResearchThrobber:before {
     left: -115%;
     -moz-animation-delay: 200ms;
     -webkit-animation-delay: 200ms;
     animation-delay: 200ms;
 }
-.RESResearchThrobber:after {
+.RedditResearchThrobber:after {
     left: 115%;
     -moz-animation-delay: 600ms;
     -webkit-animation-delay: 600ms;
     animation-delay: 600ms;
 }
-.RESResearchThrobber:before, .RESResearchThrobber:after {
+.RedditResearchThrobber:before, .RedditResearchThrobber:after {
     content: '';
     position: absolute;
     top: 0;
 }
-@-webkit-keyframes RESResearchThrobber {
+@-webkit-keyframes RedditResearchThrobber {
     30% { background: transparent; }
     70% { background: transparent; }
 }
-@keyframes RESResearchThrobber {
+@keyframes RedditResearchThrobber {
     30% { background: transparent; }
     70% { background: transparent; }
 }
