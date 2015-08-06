@@ -36,10 +36,10 @@
 				"template.js",
 				"hogan-2.0.0.js",
 				"mediacrush.js",
-				"reddit_enhancement_suite.user.js",
+				"reddit_research.user.js",
         "modules/settingsNavigation.js",
         "modules/styleTweaks.js",
-				"modules/resr.js",
+				"modules/redditresearch.js",
 
 				"init.js"
 			],

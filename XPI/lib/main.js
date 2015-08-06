@@ -119,7 +119,7 @@ pageMod.PageMod({
 	include: ["*.reddit.com"],
 	contentScriptWhen: 'start',
 	contentScriptFile: [
-		self.data.url('jquery-1.11.1.min.js'),
+		self.data.url('jquery-1.11.3.min.js'),
 		self.data.url('guiders-1.2.8.js'),
 		self.data.url('jquery.dragsort-0.6.js'),
 		self.data.url('jquery-fieldselection.min.js'),
@@ -136,12 +136,12 @@ pageMod.PageMod({
 		self.data.url('storage.js'),
 		self.data.url('template.js'),
 		self.data.url('mediacrush.js'),
-		self.data.url('gfycat.js'),
+		//self.data.url('gfycat.js'),
 		self.data.url('hogan-2.0.0.js'),
-		self.data.url('reddit_enhancement_suite.user.js'),
+		self.data.url('reddit_research.user.js'),
 		self.data.url('modules/styleTweaks.js'),
 		self.data.url('modules/settingsNavigation.js'),
-		self.data.url('modules/resr.js'),
+		self.data.url('modules/redditresearch.js'),
 		self.data.url('init.js')
 	],
 	contentStyleFile: [
