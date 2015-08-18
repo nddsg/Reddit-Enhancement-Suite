@@ -72,7 +72,6 @@
 	"permissions": [
 		"cookies",
 		"tabs",
-		"history",
 		"http://reddit.com/*",
 		"https://reddit.com/*",
 		"http://*.reddit.com/*",
