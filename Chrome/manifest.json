@@ -1,7 +1,8 @@
 {
 	"name": "RedditResearch",
 	"version": "0.5",
-	"manifest_version": 3,
+	"manifest_version_comment": "DO NOT CHANGE THE manifest_version!!!!!!!!!",
+	"manifest_version": 2,
 	"minimum_chrome_version": "26.0",
 	"description": "Reddit Research",
 	"background": {
