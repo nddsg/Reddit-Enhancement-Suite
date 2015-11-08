@@ -6,38 +6,42 @@
 permissionQueue = {
 	count: 0,
 	onloads: []
-}
+};
 
 
 chrome.runtime.onMessage.addListener(
 	function(request, sender, sendResponse) {
 		switch (request.requestType) {
 			case 'localStorage':
-				if (typeof RESStorage.setItem !== 'function') {
-					// if RESStorage isn't ready yet, wait a moment, then try setting again.
-					var waitForRESStorage = function(request) {
-						if ((typeof RESStorage !== 'undefined') && (typeof RESStorage.setItem === 'function')) {
-							RESStorage.setItem(request.itemName, request.itemValue, true);
+				if (typeof RedditResearchStorage.setItem !== 'function') {
+					// if RedditResearchStorage isn't ready yet, wait a moment, then try setting again.
+					var waitForRedditResearchStorage = function(request) {
+						if ((typeof RedditResearchStorage !== 'undefined') && (typeof RedditResearchStorage.setItem === 'function')) {
+							RedditResearchStorage.setItem(request.itemName, request.itemValue, true);
 						} else {
 							setTimeout(function() {
-								waitForRESStorage(request);
+								waitForRedditResearchStorage(request);
 							}, 50);
 						}
 					};
-					waitForRESStorage(request);
+					waitForRedditResearchStorage(request);
 				} else {
-					RESStorage.setItem(request.itemName, request.itemValue, true);
+					RedditResearchStorage.setItem(request.itemName, request.itemValue, true);
 				}
 				break;
 			case 'permissions':
 				// TODO: maybe add a type here? right now only reason is for twitter expandos so text is hard coded, etc.
 				// result will just be true/false here. if false, permission was rejected.
 				if (!request.result) {
-					modules['notifications'].showNotification("You clicked 'Deny'. RES needs permission to access the Twitter API at "+request.data.origins[0]+" for twitter expandos to show twitter posts in-line. Be assured RES does not access any of your information on twitter.com - it only accesses the API.", 10);
+					modules['notifications'].showNotification("You clicked 'Deny'. RedditResearch needs permission to access the Twitter API at "+request.data.origins[0]+" for twitter expandos to show twitter posts in-line. Be assured RedditResearch does not access any of your information on twitter.com - it only accesses the API.", 10);
 					permissionQueue.onloads[request.callbackID](false);
 				} else {
 					permissionQueue.onloads[request.callbackID](true);
 				}
+				break;
+			case 'subredditStyle':
+				var toggle = !modules['styleTweaks'].styleToggleCheckbox.checked;
+				modules['styleTweaks'].toggleSubredditStyle(toggle, RedditResearchUtils.currentSubreddit());
 				break;
 			default:
 				// sendResponse({status: "unrecognized request type"});
@@ -104,7 +108,7 @@ if (typeof GM_xmlhttpRequest === 'undefined') {
 
 
 BrowserStrategy.storageSetup = function(thisJSON) {
-	RESLoadResourceAsText = function(filename, callback) {
+	RedditResearchLoadResourceAsText = function(filename, callback) {
 		var xhr = new XMLHttpRequest();
 		xhr.onload = function() {
 			if (callback) {
@@ -118,7 +122,7 @@ BrowserStrategy.storageSetup = function(thisJSON) {
 
 	// we've got chrome, get a copy of the background page's localStorage first, so don't init until after.
 	chrome.runtime.sendMessage(thisJSON, function(response) {
-		// Does RESStorage have actual data in it?  If it doesn't, they're a legacy user, we need to copy
+		// Does RedditResearchStorage have actual data in it?  If it doesn't, they're a legacy user, we need to copy
 		// old school localStorage from the foreground page to the background page to keep their settings...
 		if (!response || typeof response.importedFromForeground === 'undefined') {
 			// it doesn't exist.. copy it over...
@@ -133,13 +137,13 @@ BrowserStrategy.storageSetup = function(thisJSON) {
 				data: ls
 			};
 			chrome.runtime.sendMessage(thisJSON, function(response) {
-				setUpRESStorage(response);
+				setUpRedditResearchStorage(response);
 			});
 		} else {
-			setUpRESStorage(response);
+			setUpRedditResearchStorage(response);
 		}
 	});
-}
+};
 
 
 BrowserStrategy.sendMessage = function(thisJSON) {
@@ -155,6 +159,14 @@ BrowserStrategy.openInNewWindow = function(thisHREF) {
 	chrome.runtime.sendMessage(thisJSON);
 };
 
+BrowserStrategy.openLinkInNewTab = function(thisHREF) {
+	var thisJSON = {
+		requestType: 'openLinkInNewTab',
+		linkURL: thisHREF
+	};
+	chrome.runtime.sendMessage(thisJSON);
+};
+
 BrowserStrategy.addURLToHistory = (function() {
 	var original = BrowserStrategy.addURLToHistory;
 
@@ -164,7 +176,7 @@ BrowserStrategy.addURLToHistory = (function() {
 		}
 
 		original(url);
-	}
+	};
 })();
 
 BrowserStrategy.supportsThirdPartyCookies = function() {
@@ -173,4 +185,4 @@ BrowserStrategy.supportsThirdPartyCookies = function() {
 	}
 
 	return true;
-}
+};

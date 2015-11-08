@@ -1,30 +1,29 @@
 {
-	"name": "Reddit Enhancement Suite",
-	"version": "4.3.2.1",
+	"name": "RedditResearch",
+	"version": "0.7",
+	"manifest_version_comment": "DO NOT CHANGE THE manifest_version!!!!!!!!!",
 	"manifest_version": 2,
 	"minimum_chrome_version": "26.0",
-	"description": "Reddit Enhancement Suite - a group of enhancements for browsing Reddit",
+	"description": "Reddit Research",
 	"background": {
 		"scripts": ["background.js"]
 	},
-	"homepage_url": "http://redditenhancementsuite.com",
+	"homepage_url": "https://dsg.nd.edu/rr",
 	"options_page": "options.html",
 	"content_scripts": [
 		{
 			"matches": [
-				"http://reddit.honestbleeps.com/*",
-				"http://redditenhancementsuite.com/*",
 				"http://reddit.com/*",
 				"https://reddit.com/*",
 				"http://*.reddit.com/*",
 				"https://*.reddit.com/*"
 			],
 			"js": [
-				"jquery-1.10.2.min.js",
+				"jquery-1.11.3.min.js",
 				"guiders-1.2.8.js",
 				"jquery.dragsort-0.6.js",
 				"jquery-fieldselection.min.js",
-				"tinycon.js",
+				"favico.js",
 				"jquery.tokeninput.js",
 				"HTMLPasteurizer.js",
 				"snuownd.js",
@@ -33,51 +32,16 @@
 				"browsersupport-chrome.js",
 				"console.js",
 				"alert.js",
+				"migrate.js",
 				"storage.js",
 				"template.js",
-				"konami.js",
 				"hogan-2.0.0.js",
 				"mediacrush.js",
-				"gfycat.js",
-				"reddit_enhancement_suite.user.js",
-				"modules/betteReddit.js",
-				"modules/userTagger.js",
-				"modules/keyboardNav.js",
-				"modules/about.js",
-				"modules/commandLine.js",
-				"modules/hover.js",
-				"modules/subredditTagger.js",
-				"modules/uppersAndDowners.js",
-				"modules/singleClick.js",
-				"modules/commentPreview.js",
-				"modules/commentTools.js",
-				"modules/sortCommentsTemporarily.js",
-				"modules/usernameHider.js",
-				"modules/showImages.js",
-				"modules/showKarma.js",
-				"modules/hideChildComments.js",
-				"modules/showParent.js",
-				"modules/neverEndingReddit.js",
-				"modules/saveComments.js",
-				"modules/userHighlight.js",
-				"modules/styleTweaks.js",
-				"modules/userbarHider.js",
-				"modules/accountSwitcher.js",
-				"modules/filteReddit.js",
-				"modules/newCommentCount.js",
-				"modules/spamButton.js",
-				"modules/commentNavigator.js",
-				"modules/subredditManager.js",
-				"modules/RESTips.js",
-				"modules/settingsNavigation.js",
-				"modules/dashboard.js",
-				"modules/notifications.js",
-				"modules/subredditInfo.js",
-				"modules/commentHidePersistor.js",
-				"modules/bitcointip.js",
-				"modules/troubleshooter.js",
-				"modules/localDate.js",
-				"modules/context.js",
+				"reddit_research.user.js",
+        "modules/settingsNavigation.js",
+        "modules/styleTweaks.js",
+				"modules/redditresearch.js",
+
 				"init.js"
 			],
 			"css": [
@@ -93,34 +57,28 @@
 		}
 	],
 	"web_accessible_resources": [
-		"jquery-1.10.2.min.map",
 		"templates.html"
 	],
 	"icons": {
 		"48": "icon48.png",
 		"128": "icon128.png"
 	},
+	"page_action": {
+		"default_icon": {
+			"19": "images/css-on-small.png",
+			"38": "images/css-on.png"
+		},
+		"default_title": "Subreddit Style On"
+	},
 	"permissions": [
 		"cookies",
 		"tabs",
-		"history",
-		"http://redditenhancementsuite.com/",
-		"http://reddit.honestbleeps.com/",
 		"http://reddit.com/*",
 		"https://reddit.com/*",
 		"http://*.reddit.com/*",
 		"https://*.reddit.com/*",
-		"http://redditgifts.com/*",
-		"http://min.us/api/*",
-		"http://*.flickr.com/photos/*",
-		"http://img.photobucket.com/*",
-		"http://imgclean.com/*",
-		"http://backend.deviantart.com/oembed?url=*",
-		"http://api.tumblr.com/v2/blog/*/posts?api_key=*&id=*",
-		"https://mediacru.sh/*",
-		"http://noembed.com/embed?url=*"
+		"https://dsg.nd.edu/*"
 	],
 	"optional_permissions": [
-		"https://api.twitter.com/*"
 	]
 }

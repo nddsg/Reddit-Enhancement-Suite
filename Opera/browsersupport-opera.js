@@ -11,7 +11,7 @@ function operaMessageHandler(msgEvent) {
 		case 'compareVersion':
 			var forceUpdate = false;
 			if (typeof eventData.data.forceUpdate !== 'undefined') forceUpdate = true;
-			RESUtils.compareVersion(eventData.data, forceUpdate);
+			RedditResearchUtils.compareVersion(eventData.data, forceUpdate);
 			break;
 		case 'loadTweet':
 			var tweet = eventData.data;
@@ -21,7 +21,7 @@ function operaMessageHandler(msgEvent) {
 			thisExpando.classList.add('twitterLoaded');
 			break;
 		case 'getLocalStorage':
-			// Does RESStorage have actual data in it?  If it doesn't, they're a legacy user, we need to copy
+			// Does RedditResearchStorage have actual data in it?  If it doesn't, they're a legacy user, we need to copy
 			// old schol localStorage from the foreground page to the background page to keep their settings...
 			if (typeof eventData.data.importedFromForeground === 'undefined') {
 				// it doesn't exist.. copy it over...
@@ -32,29 +32,29 @@ function operaMessageHandler(msgEvent) {
 				opera.extension.postMessage(JSON.stringify(thisJSON));
 			} else {
 				if (location.hostname.indexOf('reddit') !== -1) {
-					setUpRESStorage(eventData.data);
-					//RESInit();
+					setUpRedditResearchStorage(eventData.data);
+					//RedditResearchInit();
 				}
 			}
 			break;
 		case 'saveLocalStorage':
 			// Okay, we just copied localStorage from foreground to background, let's set it up...
-			setUpRESStorage(eventData.data);
+			setUpRedditResearchStorage(eventData.data);
 			if (location.hostname.indexOf('reddit') !== -1) {
-				//RESInit();
+				//RedditResearchInit();
 			}
 			break;
 		case 'localStorage':
-			if ((typeof RESStorage !== 'undefined') && (typeof RESStorage.setItem === 'function')) {
-				RESStorage.setItem(eventData.itemName, eventData.itemValue, true);
+			if ((typeof RedditResearchStorage !== 'undefined') && (typeof RedditResearchStorage.setItem === 'function')) {
+				RedditResearchStorage.setItem(eventData.itemName, eventData.itemValue, true);
 			} else {
-				// a change in opera requires this wait/timeout for the RESStorage grab to work...
-				var waitForRESStorage = function(eData) {
-					if ((typeof RESStorage !== 'undefined') && (typeof RESStorage.setItem === 'function')) {
-						RESStorage.setItem(eData.itemName, eData.itemValue, true);
+				// a change in opera requires this wait/timeout for the RedditResearchStorage grab to work...
+				var waitForRedditResearchStorage = function(eData) {
+					if ((typeof RedditResearchStorage !== 'undefined') && (typeof RedditResearchStorage.setItem === 'function')) {
+						RedditResearchStorage.setItem(eData.itemName, eData.itemValue, true);
 					} else {
 						setTimeout(function() {
-							waitForRESStorage(eData);
+							waitForRedditResearchStorage(eData);
 						}, 200);
 					}
 				};
@@ -62,7 +62,7 @@ function operaMessageHandler(msgEvent) {
 					itemName: eventData.itemName,
 					itemValue: eventData.itemValue
 				};
-				waitForRESStorage(savedEventData);
+				waitForRedditResearchStorage(savedEventData);
 			}
 			break;
 		case 'addURLToHistory':
@@ -135,16 +135,16 @@ if (typeof GM_xmlhttpRequest === 'undefined') {
 
 
 function operaUpdateCallback(obj) {
-	RESUtils.compareVersion(obj);
+	RedditResearchUtils.compareVersion(obj);
 }
 
 function operaForcedUpdateCallback(obj) {
-	RESUtils.compareVersion(obj, true);
+	RedditResearchUtils.compareVersion(obj, true);
 }
 
 
 BrowserStrategy.storageSetup = function(thisJSON) {
-	RESLoadResourceAsText = function(filename, callback) {
+	RedditResearchLoadResourceAsText = function(filename, callback) {
 		var f = opera.extension.getFile('/' + filename);
 		var fr = new FileReader();
 		fr.onload = function() {
@@ -158,7 +158,7 @@ BrowserStrategy.storageSetup = function(thisJSON) {
 	opera.extension.postMessage(JSON.stringify(thisJSON));
 };
 
-BrowserStrategy.RESInitReadyCheck = function(RESInit) {
+BrowserStrategy.RedditResearchInitReadyCheck = function(RedditResearchInit) {
 	// require.js-like modular injected scripts, code via:
 	// http://my.opera.com/BS-Harou/blog/2012/08/08/modular-injcted-scripts-in-extensions
 	// Note: This code requires Opera 12.50 to run!
@@ -474,13 +474,13 @@ BrowserStrategy.RESInitReadyCheck = function(RESInit) {
 		require._base = '/modules/';
 
 		// save Reddit's jQuery, because this script is going to jack it up.
-		// now, take the new jQuery in and store it local to RES's scope (it's a var up top)
+		// now, take the new jQuery in and store it local to RedditResearch's scope (it's a var up top)
 		var redditJq = window.$;
-		require(['jquery-1.10.2.min', 'guiders-1.2.8', 'tinycon', 'snuownd', 'jquery.dragsort-0.6', 'jquery.tokeninput', 'jquery-fieldselection.min'], function() {
-			RESInit();
+		require(['jquery-1.11.1.min', 'guiders-1.2.8', 'favico', 'snuownd', 'jquery.dragsort-0.6', 'jquery.tokeninput', 'jquery-fieldselection.min'], function() {
+			RedditResearchInit();
 		});
 	} else {
-		RESInit();
+		RedditResearchInit();
 	}
 };
 
@@ -496,6 +496,14 @@ BrowserStrategy.getOutlineProperty = function() {
 BrowserStrategy.openNewWindow = function (thisHREF) {
 	var thisJSON = {
 		requestType: 'keyboardNav',
+		linkURL: thisHREF
+	};
+	opera.extension.postMessage(JSON.stringify(thisJSON));
+};
+
+BrowserStrategy.openLinkInNewTab = function (thisHREF) {
+	var thisJSON = {
+		requestType: 'openLinkInNewTab',
 		linkURL: thisHREF
 	};
 	opera.extension.postMessage(JSON.stringify(thisJSON));
